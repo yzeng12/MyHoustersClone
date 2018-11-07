@@ -2,7 +2,7 @@ package com.example.yzeng.myhoustersclone.login;
 
 import com.google.gson.annotations.SerializedName;
 
-class LoginReturnPOJO {
+public class LoginReturnPOJO {
 
     @SerializedName("userid")
     String userid;

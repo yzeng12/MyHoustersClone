@@ -1,5 +1,6 @@
 package com.example.yzeng.myhoustersclone.login;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
@@ -14,6 +15,11 @@ import android.widget.Toast;
 
 
 import com.example.yzeng.myhoustersclone.R;
+import com.example.yzeng.myhoustersclone.network_retrofit.ApiService;
+import com.example.yzeng.myhoustersclone.network_retrofit.RetrofitInstance;
+import com.example.yzeng.myhoustersclone.signup.SignupActivity;
+import com.example.yzeng.myhoustersclone.ui_and_other.MySharedPrefences;
+import com.example.yzeng.myhoustersclone.ui_and_other.RememberPrefrence;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -110,8 +116,8 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
     @Override
     public void signUpConfirm() {
         //TODO
-//        Intent i = new Intent(LoginActivity.this, SignupActivity.class);
-//        startActivity(i);
+        Intent i = new Intent(LoginActivity.this, SignupActivity.class);
+        startActivity(i);
         Toast.makeText(this, "to signup", Toast.LENGTH_SHORT).show();
     }
 
@@ -149,7 +155,6 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
                 Toast.makeText(LoginActivity.this, "" + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
 

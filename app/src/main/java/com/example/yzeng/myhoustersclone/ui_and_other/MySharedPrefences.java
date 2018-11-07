@@ -1,4 +1,4 @@
-package com.example.yzeng.myhoustersclone.login;
+package com.example.yzeng.myhoustersclone.ui_and_other;
 
 import android.content.Context;
 import android.content.SharedPreferences;

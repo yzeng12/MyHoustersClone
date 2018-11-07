@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewIcon">
 
-        <com.example.yzeng.myhoustersclone.login.EditTextWithClear
+        <com.example.yzeng.myhoustersclone.ui_and_other.EditTextWithClear
             android:id="@+id/editTextLoginEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
