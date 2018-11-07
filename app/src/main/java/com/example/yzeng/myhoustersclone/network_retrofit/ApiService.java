@@ -1,8 +1,7 @@
 package com.example.yzeng.myhoustersclone.network_retrofit;
 
+import com.example.yzeng.myhoustersclone.forgotpassword.ForgotPasswordPOJO;
 import com.example.yzeng.myhoustersclone.login.LoginReturnPOJO;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -25,4 +24,8 @@ public interface ApiService {
     @GET("/aamir/property-mgmt/pro_mgt_reg.php?")
     Call<String> getSignUpReturn(@Query("email") String email, @Query("landlord_email") String landlord_email,
                                  @Query("password") String password, @Query("account_for") String account_for);
+
+    @GET("/aamir/property-mgmt/pro_mgt_forgot_pass.php?")
+
+    Call<ForgotPasswordPOJO> getForgotpassword(@Query("email") String email);
 }

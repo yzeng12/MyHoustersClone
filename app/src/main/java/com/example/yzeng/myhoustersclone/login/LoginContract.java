@@ -9,6 +9,7 @@ public interface LoginContract {
         void signUp();
 
         void login();
+        void forgot();
     }
     
     interface View{
