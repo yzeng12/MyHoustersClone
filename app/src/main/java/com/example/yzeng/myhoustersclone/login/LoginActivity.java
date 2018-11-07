@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.example.yzeng.myhoustersclone.forgotpassword.ForgotPasswordActivity;
 import com.example.yzeng.myhoustersclone.homepage.HomePageActivity;
 import com.example.yzeng.myhoustersclone.R;
 import com.example.yzeng.myhoustersclone.network_retrofit.ApiService;
@@ -134,10 +135,10 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
 
                 LoginReturnPOJO loginReturnPOJO = response.body();
 
-                if(loginReturnPOJO != null) {
+                if(loginReturnPOJO.getAppapikey() != null) {
                     Log.i("MainActivity", "onResponse: " + loginReturnPOJO.toString());
                     mySharedPrefences.setUserInfo(LoginActivity.this, loginReturnPOJO.getUserid(), loginReturnPOJO.getUsertype(),
-                            loginReturnPOJO.getUseremail(),loginReturnPOJO.getAppapikey(), etPassword.getText().toString());
+                            loginReturnPOJO.getUseremail(), loginReturnPOJO.getAppapikey(), etPassword.getText().toString());
                     //TODO
                     //login successfull   to main page
                             Intent i = new Intent(LoginActivity.this, HomePageActivity.class);
@@ -147,6 +148,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
 
                 } else {
                     Log.i("MainActivity", "onResponse: " + response.body().toString());
+                    Toast.makeText(LoginActivity.this, "UserName or Password Incorrect", Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -161,9 +163,9 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
 
     @Override
     public void forgot() {
-        //TODO
-//        Intent i = new Intent(LoginActivity.this, SignupActivity.class);
-//        startActivity(i);
+
+        Intent i = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
+        startActivity(i);
         Toast.makeText(this, "to forgot", Toast.LENGTH_SHORT).show();
     }
 

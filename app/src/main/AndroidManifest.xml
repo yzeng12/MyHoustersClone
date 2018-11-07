@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.yzeng.myhoustersclone">
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
@@ -18,15 +19,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".login.LoginActivity"/>
-        <activity android:name="com.example.yzeng.myhoustersclone.signup.SignupActivity">
-        </activity>
-        <activity android:name=".homepage.HomePageActivity">
-        </activity>
+        <activity android:name=".login.LoginActivity" />
+        <activity android:name=".signup.SignupActivity"></activity>
+        <activity android:name=".homepage.HomePageActivity"></activity>
         <activity android:name=".homepage.AlertsActivity" />
         <activity android:name=".homepage.PropertiesActivity" />
-        <activity android:name=".homepage.TenantsActivity"></activity>
-
+        <activity android:name=".homepage.TenantsActivity" />
+        <activity android:name=".forgotpassword.ForgotPasswordActivity"></activity>
     </application>
 
 </manifest>
