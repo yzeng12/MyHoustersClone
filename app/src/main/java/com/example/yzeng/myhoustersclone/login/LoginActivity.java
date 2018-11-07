@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.example.yzeng.myhoustersclone.homepage.HomePageActivity;
 import com.example.yzeng.myhoustersclone.R;
 import com.example.yzeng.myhoustersclone.network_retrofit.ApiService;
 import com.example.yzeng.myhoustersclone.network_retrofit.RetrofitInstance;
@@ -139,8 +140,8 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
                             loginReturnPOJO.getUseremail(),loginReturnPOJO.getAppapikey(), etPassword.getText().toString());
                     //TODO
                     //login successfull   to main page
-                    //        Intent i = new Intent(LoginActivity.this, SignupActivity.class);
-                    //        startActivity(i);
+                            Intent i = new Intent(LoginActivity.this, HomePageActivity.class);
+                            startActivity(i);
                     Toast.makeText(LoginActivity.this, "Login Success" , Toast.LENGTH_SHORT).show();
 
 

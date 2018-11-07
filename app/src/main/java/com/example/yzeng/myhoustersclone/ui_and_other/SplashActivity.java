@@ -1,4 +1,4 @@
-package com.example.yzeng.myhoustersclone;
+package com.example.yzeng.myhoustersclone.ui_and_other;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.example.yzeng.myhoustersclone.R;
 import com.example.yzeng.myhoustersclone.login.LoginActivity;
 
 public class SplashActivity extends AppCompatActivity {
