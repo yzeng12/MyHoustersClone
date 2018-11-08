@@ -20,12 +20,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".login.LoginActivity" />
-        <activity android:name=".signup.SignupActivity"></activity>
-        <activity android:name=".homepage.HomePageActivity"></activity>
+        <activity android:name=".signup.SignupActivity" />
+        <activity android:name=".homepage.HomePageActivity" />
         <activity android:name=".homepage.AlertsActivity" />
         <activity android:name=".homepage.PropertiesActivity" />
         <activity android:name=".tenant.TenantsActivity" />
-        <activity android:name=".forgotpassword.ForgotPasswordActivity"></activity>
+        <activity android:name=".forgotpassword.ForgotPasswordActivity" />
+        <activity android:name=".Document.DocumentsActivity" />
+        <activity android:name=".TodoList.TodoListActivity"></activity>
     </application>
 
 </manifest>
