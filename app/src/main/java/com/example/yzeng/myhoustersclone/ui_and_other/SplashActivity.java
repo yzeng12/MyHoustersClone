@@ -19,7 +19,7 @@ public class SplashActivity extends AppCompatActivity {
 
         imageView = findViewById(R.id.imageViewSplash);
 
-        Animation animation = AnimationUtils.loadAnimation(this, R.anim.fade);
+/*        Animation animation = AnimationUtils.loadAnimation(this, R.anim.fade);
 
         imageView.startAnimation(animation);
 
@@ -38,6 +38,9 @@ public class SplashActivity extends AppCompatActivity {
 
         };
 
-        thread.start();
+        thread.start();*/
+
+        Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+        startActivity(intent);
     }
 }

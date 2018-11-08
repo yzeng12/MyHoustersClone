@@ -36,7 +36,9 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/logo_properties" />
+
         <ImageView
+            android:id="@+id/icon_tenants"
             android:layout_weight="1"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -79,11 +81,6 @@
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
-
-        <View
-            android:background="#c2e2ed"
-            android:layout_width="match_parent"
-            android:layout_height="10dp"/>
 
         <LinearLayout
             android:background="#c2e2ed"

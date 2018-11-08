@@ -25,7 +25,7 @@
         </activity>
         <activity android:name=".homepage.AlertsActivity" />
         <activity android:name=".homepage.PropertiesActivity" />
-        <activity android:name=".homepage.TenantsActivity"></activity>
+        <activity android:name=".tenant.TenantsActivity"></activity>
 
     </application>
 

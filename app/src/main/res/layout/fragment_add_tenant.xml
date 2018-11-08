@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_input_tenant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/medium_size"
+        android:text="Step 1: Enter tenants' information"
+        android:layout_marginStart="@dimen/medium_size"
+        android:textSize="@dimen/text_size_20sp"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/small_size"
+        android:layout_marginRight="@dimen/small_size">
+
+        <EditText
+            android:id="@+id/et_tenant_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tenant's name"
+            android:layout_marginTop="@dimen/medium_size"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/small_size"
+        android:layout_marginRight="@dimen/small_size">
+
+        <EditText
+            android:id="@+id/et_tenant_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tenant's email"
+            android:layout_marginTop="@dimen/medium_size"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/small_size"
+        android:layout_marginRight="@dimen/small_size">
+
+        <EditText
+            android:id="@+id/et_tenant_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tenant's address"
+            android:layout_marginTop="@dimen/medium_size"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/small_size"
+        android:layout_marginRight="@dimen/small_size">
+
+        <EditText
+            android:id="@+id/et_tenant_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tenant's mobile"
+            android:layout_marginTop="@dimen/medium_size"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_select_property"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/medium_size"
+        android:text="Step 2: Choose a property"
+        android:layout_marginStart="@dimen/medium_size"
+        android:textSize="@dimen/text_size_20sp"/>
+
+  <Spinner
+        android:id="@+id/sp_tenant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/medium_size">
+
+    </Spinner>
+
+    <Button
+        android:id="@+id/bt_add_tenant"
+        android:layout_width="@dimen/button_normal"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/large_size"
+        android:text="Add tenant"
+        android:textAllCaps="false"/>
+         
+
+</LinearLayout>

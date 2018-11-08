@@ -1,4 +1,4 @@
-package com.example.yzeng.myhoustersclone.login;
+package com.example.yzeng.myhoustersclone.pojo;
 
 import com.google.gson.annotations.SerializedName;
 

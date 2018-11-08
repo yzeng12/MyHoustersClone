@@ -18,6 +18,7 @@ import com.example.yzeng.myhoustersclone.homepage.HomePageActivity;
 import com.example.yzeng.myhoustersclone.R;
 import com.example.yzeng.myhoustersclone.network_retrofit.ApiService;
 import com.example.yzeng.myhoustersclone.network_retrofit.RetrofitInstance;
+import com.example.yzeng.myhoustersclone.pojo.LoginReturnPOJO;
 import com.example.yzeng.myhoustersclone.signup.SignupActivity;
 import com.example.yzeng.myhoustersclone.ui_and_other.MySharedPrefences;
 import com.example.yzeng.myhoustersclone.ui_and_other.RememberPrefrence;
@@ -126,7 +127,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
     public void loginConfirm() {
 
 
-        ApiService apiService = RetrofitInstance.getRetrofitInstance().create(ApiService.class);
+        ApiService apiService = RetrofitInstance.getRetrofitJsonInstance().create(ApiService.class);
         Call<LoginReturnPOJO> call = apiService.getLoginReturn(etEmail.getText().toString(),etPassword.getText().toString());
         call.enqueue(new Callback<LoginReturnPOJO>() {
             @Override

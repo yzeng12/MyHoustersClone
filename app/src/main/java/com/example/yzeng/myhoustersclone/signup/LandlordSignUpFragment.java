@@ -60,7 +60,7 @@ public class LandlordSignUpFragment extends Fragment implements SignupInterface.
     @Override
     public void signupConfirm() {
         Log.i(TAG, "2");
-        ApiService apiService = RetrofitInstance.getRetrofitInstance2()
+        ApiService apiService = RetrofitInstance.getRetrofitStringInstance()
                 .create(ApiService.class);
         Call<String> call = apiService.getSignUpReturn(editTextEmail.getText().toString(),
                 "null@gmail.com", editTextPassword.getText().toString(), "Landlord" );

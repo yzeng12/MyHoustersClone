@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.example.yzeng.myhoustersclone.R;
+import com.example.yzeng.myhoustersclone.tenant.TenantsActivity;
 import com.github.mikephil.charting.charts.HorizontalBarChart;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Description;
@@ -27,7 +28,7 @@ import java.util.List;
 
 public class HomePageFragment extends Fragment {
 
-    ImageView icon_alerts;
+    ImageView icon_alerts, icon_tenant;
     private PieChart pieChart;
     private HorizontalBarChart barChart;
     @Nullable
@@ -40,6 +41,7 @@ public class HomePageFragment extends Fragment {
         pieChart = view.findViewById(R.id.pieChart);
         barChart = view.findViewById(R.id.horizontal_barChart);
         icon_alerts = view.findViewById(R.id.icon_alerts);
+        icon_tenant = view.findViewById(R.id.icon_tenants);
 
 
         addPieChart();
@@ -50,6 +52,14 @@ public class HomePageFragment extends Fragment {
             public void onClick(View v) {
 
                 startActivity(new Intent(getActivity(),AlertsActivity.class));
+            }
+        });
+
+        icon_tenant.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), TenantsActivity.class);
+                startActivity(i);
             }
         });
 

@@ -6,31 +6,32 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class RetrofitInstance {
 
-    private static Retrofit retrofit;
-    private static Retrofit retrofit2;
+    private static Retrofit retrofitJson;
+    private static Retrofit retrofitString;
   // http://rjtmobile.com/aamir/property-mgmt/pro_mgt_forgot_pass.php?email=aa@aa.com         ..... full url
     public static final String BASE_URL = "http://rjtmobile.com";
 
-     public static Retrofit getRetrofitInstance()
+     public static Retrofit getRetrofitJsonInstance()
     {
-        if(retrofit == null)
+        if(retrofitJson == null)
         {
-            retrofit = new Retrofit.Builder()
+            retrofitJson = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
-        return retrofit;
+        return retrofitJson;
     }
-    public static Retrofit getRetrofitInstance2()
+
+    public static Retrofit getRetrofitStringInstance()
     {
-        if(retrofit2 == null)
+        if(retrofitString == null)
         {
-            retrofit2 = new Retrofit.Builder()
+            retrofitString = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(ScalarsConverterFactory.create())
                     .build();
         }
-        return retrofit2;
+        return retrofitString;
     }
 }
