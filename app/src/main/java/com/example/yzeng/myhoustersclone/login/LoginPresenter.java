@@ -23,6 +23,7 @@ public class LoginPresenter implements LoginContract.Presenter {
         view.loginConfirm();
     }
 
+    @Override
     public void forgot() {
 
         view.forgot();
