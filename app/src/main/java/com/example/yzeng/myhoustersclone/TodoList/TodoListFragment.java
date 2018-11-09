@@ -30,11 +30,12 @@ public class TodoListFragment extends Fragment implements TodoListInterface.List
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_document_content,
+        view = inflater.inflate(R.layout.fragment_todolist_content,
                 container, false);
         db = OurRoomDataBase.getDatabase(getActivity());
-       rv=view.findViewById(R.id.rv_Document);
+
         Dao = db.DatabaseDao();
+        rv=view.findViewById(R.id.rv_Todo);
         todoListPresenter = new TodoListPresenter(this);
 
 
@@ -48,7 +49,7 @@ public class TodoListFragment extends Fragment implements TodoListInterface.List
 
 
     @Override
-    public void rvadapterconfirm() {
+    public void rvadapterconfirm(List<DataBaseTodoList> list) {
         TodoListAdapter adapter = new TodoListAdapter(getActivity(), list);
         //RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayout.VERTICAL, false);
         RecyclerView.LayoutManager layoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
@@ -74,14 +75,14 @@ public class TodoListFragment extends Fragment implements TodoListInterface.List
 
         @Override
         protected Void doInBackground(Void... voids) {
-  //          list =mAsyncTaskDao.getAllDocument();
+            list = mAsyncTaskDao.getAllTodolist();
             return null;
         }
 
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-            todoListPresenter.rvadapter();
+            todoListPresenter.rvadapter(list);
         }
     }
 }

@@ -1,5 +1,7 @@
 package com.example.yzeng.myhoustersclone.TodoList;
 
+import java.util.List;
+
 public interface TodoListInterface {
     
     interface View{
@@ -14,9 +16,9 @@ public interface TodoListInterface {
 
         void TakePic();
 
-        void addDocument();
+        void addTodolist();
 
-        void rvadapter();
+        void rvadapter(List<DataBaseTodoList> list);
 
         void getDataFromDatabase();
     }
@@ -33,7 +35,7 @@ public interface TodoListInterface {
 
      interface ListFragmentView {
 
-         void rvadapterconfirm();
+         void rvadapterconfirm(List<DataBaseTodoList> list);
          void getdata();
      }
 }
