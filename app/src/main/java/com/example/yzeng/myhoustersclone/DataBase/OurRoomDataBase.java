@@ -8,8 +8,9 @@ import android.content.Context;
 
 import com.example.yzeng.myhoustersclone.Document.DataBaseDocument;
 import com.example.yzeng.myhoustersclone.TodoList.DataBaseTodoList;
+import com.example.yzeng.myhoustersclone.trip.DataBaseTripList;
 
-@Database (entities = {DataBaseDocument.class,DataBaseTodoList.class},version = 1 )
+@Database (entities = {DataBaseDocument.class,DataBaseTodoList.class, DataBaseTripList.class},version = 1 )
 public abstract class OurRoomDataBase extends RoomDatabase {
     public abstract DataBaseDao DatabaseDao();
     private static OurRoomDataBase INSTANCE;

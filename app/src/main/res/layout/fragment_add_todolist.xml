@@ -98,7 +98,7 @@
         <Button
             android:id="@+id/btn_todolist_picture"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/large_size"
             android:text="Take a picture"
             android:textColor="@color/white"
             android:background="@color/colorPrimary"
@@ -184,8 +184,8 @@
         <Button
             android:id="@+id/btn_todolist_ADD"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/text_size_20sp"
-            android:text="Confirm add document"
+            android:layout_height="@dimen/large_size"
+            android:text="Confirm add TodoList"
             android:textColor="@color/white"
             android:background="@color/colorPrimary"
             android:padding="@dimen/small_size"

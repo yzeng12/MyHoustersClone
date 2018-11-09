@@ -6,6 +6,7 @@ import android.arch.persistence.room.Query;
 
 import com.example.yzeng.myhoustersclone.Document.DataBaseDocument;
 import com.example.yzeng.myhoustersclone.TodoList.DataBaseTodoList;
+import com.example.yzeng.myhoustersclone.trip.DataBaseTripList;
 
 import java.util.List;
 
@@ -24,6 +25,11 @@ public interface DataBaseDao {
 
     @Query("SELECT * from TodoList_Table ORDER BY ID ASC")
     List<DataBaseTodoList> getAllTodolist();
+    @Query("SELECT * from trip_table ORDER BY ID ASC")
+    List<DataBaseTripList> getAllTriplist();
+    @Insert
+    void insertTriplist(DataBaseTripList Trip);
+
 /*
     @Insert
     void insert(DataBaseDocument todoNote);

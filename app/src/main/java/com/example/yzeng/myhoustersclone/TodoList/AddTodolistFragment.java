@@ -190,8 +190,8 @@ public class AddTodolistFragment extends Fragment implements TodoListInterface.F
         insert(todoList);
     }
 
-    public void insert(DataBaseTodoList dataBaseDocument) {
-        new insertAsyncTask(Dao).execute(dataBaseDocument);
+    public void insert(DataBaseTodoList dataBaseTodoList) {
+        new insertAsyncTask(Dao).execute(dataBaseTodoList);
         Toast.makeText(getActivity(), "Add Document Success", Toast.LENGTH_LONG).show();
         getActivity().getSupportFragmentManager()
                 .beginTransaction()
