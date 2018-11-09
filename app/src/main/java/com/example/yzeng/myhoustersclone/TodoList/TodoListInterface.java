@@ -1,6 +1,6 @@
-package com.example.yzeng.myhoustersclone.Document;
+package com.example.yzeng.myhoustersclone.TodoList;
 
-public interface DocumentInterface {
+public interface TodoListInterface {
     
     interface View{
 

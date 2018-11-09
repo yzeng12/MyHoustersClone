@@ -4,30 +4,20 @@ import com.example.yzeng.myhoustersclone.tenant.AddTenantFragment;
 import com.example.yzeng.myhoustersclone.tenant.TenantsActivity;
 
 public class DocumentPresenter implements DocumentInterface.Presenter {
-    @Override
-    public void initView() {
 
+    DocumentInterface.View view;
+    AddDocumentFragment addDocumentFragment;
+    DocumentListFragment documentListFragment;
+
+    public DocumentPresenter(DocumentsActivity documentsActivity) {
+        view = documentsActivity;
     }
 
-    @Override
-    public void initSpinner() {
-
+    public DocumentPresenter(DocumentInterface.FragmentView addFragment) {
+        this.addDocumentFragment = (AddDocumentFragment) addFragment;
     }
-
-    @Override
-    public void addTenant() {
-
-    }
-
-   /* DocumentInterface.View view;
-    AddTenantFragment addTenantFragment;
-
-    public DocumentPresenter(TenantsActivity tenantsActivity) {
-        view = tenantsActivity;
-    }
-
-    public DocumentPresenter(DocumentInterface.FragmentView addTenantFragment) {
-        this.addTenantFragment = (AddTenantFragment) addTenantFragment;
+    public DocumentPresenter(DocumentInterface.ListFragmentView addListFragment) {
+        this.documentListFragment = (DocumentListFragment) addListFragment;
     }
 
     @Override
@@ -36,12 +26,24 @@ public class DocumentPresenter implements DocumentInterface.Presenter {
     }
 
     @Override
-    public void initSpinner() {
-        addTenantFragment.initSpinnerConfirm();
+    public void initFragView() {
+        addDocumentFragment.initFragViewConfirm();
+    }
+    @Override
+    public void TakePic() {
+        addDocumentFragment.TakePicConfirm();
+    }
+    @Override
+    public void addDocument() {
+        addDocumentFragment.addConfirm();
     }
 
     @Override
-    public void addTenant() {
-        addTenantFragment.addTenantConfirm();
-    }*/
+    public void rvadapter() {
+        documentListFragment.rvadapterconfirm();
+    }
+@Override
+    public void getDataFromDatabase() {
+    documentListFragment.getdata();
+    }
 }
