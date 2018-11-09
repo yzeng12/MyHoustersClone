@@ -1,7 +1,6 @@
 package com.example.yzeng.myhoustersclone.Document;
 
-import com.example.yzeng.myhoustersclone.tenant.AddTenantFragment;
-import com.example.yzeng.myhoustersclone.tenant.TenantsActivity;
+
 
 public class DocumentPresenter implements DocumentInterface.Presenter {
 
