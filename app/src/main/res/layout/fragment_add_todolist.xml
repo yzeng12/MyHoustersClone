@@ -17,63 +17,58 @@
             android:paddingStart="@dimen/small_size"
             android:background="#b3b3b3"
             />
-   <!--     <EditText
-            android:id="@+id/et_Document_name"
+        <Spinner
+            android:id="@+id/sp_Todo_Priority"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/medium_size">
+
+        </Spinner>
+        <EditText
+            android:id="@+id/et_Todo_summary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="Name"
-            android:padding="@dimen/medium_size"/>
+            android:hint="summary"
+            android:padding="@dimen/medium_size"
+            />
 
         <EditText
-            android:id="@+id/et_Document_Type"
+            android:id="@+id/et_Todo_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="Type"
+            android:hint="description"
+            android:padding="@dimen/medium_size"
+            />
+        <EditText
+            android:id="@+id/et_Todo_property"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="property"
             android:padding="@dimen/medium_size"
             />
 
-        <EditText
-            android:id="@+id/et_Document_Type"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Type"
-            android:padding="@dimen/medium_size"
-            />
-        <EditText
-            android:id="@+id/et_Document_Type"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Type"
-            android:padding="@dimen/medium_size"
-            />
-        <EditText
-            android:id="@+id/et_Document_Type"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Type"
-            android:padding="@dimen/medium_size"
-            />
         <TextView
-            android:id="@+id/tv_date"
-            android:layout_marginTop="@dimen/large_size"
-
-
+            android:id="@+id/tv_todolist_date"
+            android:padding="@dimen/medium_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
             android:hint="select_departure_date"
+            android:textSize="@dimen/medium_size"
 
-            android:drawableRight="@drawable/ic_calender"/>-->
+            android:drawableRight="@drawable/ic_calender"/>
 
         <ImageView
-            android:id="@+id/iv_Document_picture"
+            android:id="@+id/iv_todolist_picture"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/small_size"
@@ -83,7 +78,7 @@
             android:maxWidth="400dp"
             />
         <Button
-            android:id="@+id/btn_Document_picture"
+            android:id="@+id/btn_todolist_picture"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Take a picture"
@@ -93,8 +88,63 @@
             android:layout_margin="@dimen/small_size"
             />
 
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_size_20sp"
+            android:text="Cost and Vendor info"
+            android:textStyle="bold|italic"
+            android:paddingStart="@dimen/small_size"
+            android:background="#b3b3b3"
+            />
+        <EditText
+            android:id="@+id/et_Todo_Vendor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Assign to Vendor"
+            android:padding="@dimen/medium_size"
+            />
+        <EditText
+            android:id="@+id/et_Todo_estimate_cost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="estimate cost"
+            android:padding="@dimen/medium_size"
+            />
+        <EditText
+            android:id="@+id/et_Todo_actual_cost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="actual_cost"
+            android:padding="@dimen/medium_size"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_size_20sp"
+            android:text="Status Info"
+            android:textStyle="bold|italic"
+            android:paddingStart="@dimen/small_size"
+            android:background="#b3b3b3"
+            />
+        <Spinner
+            android:id="@+id/sp_Todo_Status"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/medium_size">
+
+        </Spinner>
+
         <Button
-            android:id="@+id/btn_Document_ADD"
+            android:id="@+id/btn_todolist_ADD"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Confirm add document"

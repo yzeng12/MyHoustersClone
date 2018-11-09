@@ -31,8 +31,8 @@ public class DataBaseTodoList {
     @ColumnInfo(name = "status")
     String status;
 
-    public DataBaseTodoList(@NonNull int id, String priority, String summary, String description, String property, String duedate, String vendor, String estimatecost, String actualcost, String status) {
-        this.id = id;
+    public DataBaseTodoList(String priority, String summary, String description, String property, String duedate, String vendor, String estimatecost, String actualcost, String status) {
+
         this.priority = priority;
         this.summary = summary;
         this.description = description;

@@ -25,21 +25,22 @@ public class TodoListActivity extends AppCompatActivity implements TodoListInter
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_documents);
+        setContentView(R.layout.activity_todo_list);
         toolbar = findViewById(R.id.toolbar_tenant);
 
-        imageButtonAddTenant = findViewById(R.id.ib_add_tenant);
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.Document_content, new TodoListFragment()).
-                addToBackStack(null)
-                .commit();
 
-        db = OurRoomDataBase.getDatabase(this);
-        Dao = db.DatabaseDao();
+        imageButtonAddTenant = findViewById(R.id.ib_add_tenant);
 
         todoListPresenter = new TodoListPresenter(this);
         todoListPresenter.initView();
+        db = OurRoomDataBase.getDatabase(this);
+        Dao = db.DatabaseDao();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.TodoList_content, new TodoListFragment()).
+                addToBackStack(null)
+                .commit();
+
         //todo display recycle view
     }
 
@@ -49,7 +50,7 @@ public class TodoListActivity extends AppCompatActivity implements TodoListInter
         imageButtonAddTenant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.Document_content,
+                getSupportFragmentManager().beginTransaction().replace(R.id.TodoList_content,
                         new AddTodolistFragment(), null).addToBackStack(null).commit();
                 toolbar.setTitle("Add TodoList");
             }

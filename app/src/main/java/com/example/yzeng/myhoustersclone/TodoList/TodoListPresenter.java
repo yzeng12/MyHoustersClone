@@ -1,5 +1,7 @@
 package com.example.yzeng.myhoustersclone.TodoList;
 
+import java.util.List;
+
 public class TodoListPresenter implements TodoListInterface.Presenter {
 
     TodoListInterface.View view;
@@ -31,13 +33,13 @@ public class TodoListPresenter implements TodoListInterface.Presenter {
         addTodolistFragment.TakePicConfirm();
     }
     @Override
-    public void addDocument() {
+    public void addTodolist() {
         addTodolistFragment.addConfirm();
     }
 
     @Override
-    public void rvadapter() {
-        todoListFragment.rvadapterconfirm();
+    public void rvadapter(List<DataBaseTodoList> list) {
+        todoListFragment.rvadapterconfirm(list);
     }
 @Override
     public void getDataFromDatabase() {

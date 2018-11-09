@@ -33,7 +33,7 @@ public class TodoListAdapter extends RecyclerView.Adapter<TodoListAdapter.Produc
             holder = new ProductListViewHolder(view);
         }
         else {
-            View view = LayoutInflater.from(context).inflate(R.layout.item_document, parent, false);
+            View view = LayoutInflater.from(context).inflate(R.layout.item_todolist, parent, false);
             view.setOnClickListener(this);
             holder = new ProductListViewHolder(view);
         }
@@ -43,9 +43,19 @@ public class TodoListAdapter extends RecyclerView.Adapter<TodoListAdapter.Produc
     @Override
     public void onBindViewHolder(@NonNull ProductListViewHolder holder, int position) {
         if(List.size()>0){
-     /*   holder.tv_name.setText("Document Name: " + List.get(position).getName());
-        holder.tv_type.setText("Document Type: " + List.get(position).getType());
-  */      holder.tv_click.setText("Click Item for Detail");
+        holder.tv.setText("Priority: " + List.get(position).getPriority()+ "\n"+
+                "Summary: " + List.get(position).getSummary()+ "\n"+
+                "Description: " + List.get(position).getDescription()+ "\n"+
+                "Propery: " + List.get(position).getProperty()+ "\n"+
+                "Date: " + List.get(position).getDuedate()+ "\n"+
+                "Vendor Name: " + List.get(position).getVendor()+ "\n"+
+                "Estimate Cost: " + List.get(position).getEstimatecost()+ "\n"+
+                "Actual Cost: " + List.get(position).getActualcost()+ "\n"+
+                "Status: " + List.get(position).getStatus()+ "\n"
+
+        );
+
+
        // Picasso.with(context).load(List.get(position).getImage()).placeholder(context.getResources().getDrawable(R.drawable.photonotavailable1)).into(holder.iv);
         holder.itemView.setTag(position);
         }
@@ -78,13 +88,12 @@ public class TodoListAdapter extends RecyclerView.Adapter<TodoListAdapter.Produc
     }
 
     public class ProductListViewHolder extends RecyclerView.ViewHolder {
-        TextView tv_name, tv_type,tv_click;
+        TextView tv;
         Context context;
         public ProductListViewHolder(@NonNull View view) {
             super(view);
-            tv_name = view.findViewById(R.id.tv_document_detail_name);
-            tv_type = view.findViewById(R.id.tv_document_detail_type);
-            tv_click = view.findViewById(R.id.tv_document_detail_clickfordetail);
+            tv = view.findViewById(R.id.tv_todolist_detail);
+
         }
     }
 }

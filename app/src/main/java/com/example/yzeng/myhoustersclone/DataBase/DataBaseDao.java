@@ -5,6 +5,7 @@ import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 
 import com.example.yzeng.myhoustersclone.Document.DataBaseDocument;
+import com.example.yzeng.myhoustersclone.TodoList.DataBaseTodoList;
 
 import java.util.List;
 
@@ -18,6 +19,11 @@ public interface DataBaseDao {
     @Query("SELECT * from Document ORDER BY ID ASC")
     List<DataBaseDocument> getAllDocument();
 
+    @Insert
+    void insertTodolist(DataBaseTodoList todoList);
+
+    @Query("SELECT * from TodoList_Table ORDER BY ID ASC")
+    List<DataBaseTodoList> getAllTodolist();
 /*
     @Insert
     void insert(DataBaseDocument todoNote);
