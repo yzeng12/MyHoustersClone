@@ -4,6 +4,10 @@ public interface TenantInterface {
     
     interface View{
         void initViewConfirm();
+
+        void initRVConfirm();
+
+        void getTenantConfirm();
     }
     
     interface Presenter{
@@ -12,6 +16,12 @@ public interface TenantInterface {
         void initSpinner();
 
         void addTenant();
+
+        void initRV();
+
+        void getTenant();
+
+        void sendMessage();
     }
     
     interface FragmentView{
@@ -19,5 +29,7 @@ public interface TenantInterface {
         void initSpinnerConfirm();
 
         void addTenantConfirm();
+
+        void sendMessageConfirm();
     }
 }

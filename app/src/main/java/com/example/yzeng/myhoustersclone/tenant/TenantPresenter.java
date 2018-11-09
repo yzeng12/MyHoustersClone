@@ -3,14 +3,14 @@ package com.example.yzeng.myhoustersclone.tenant;
 public class TenantPresenter implements TenantInterface.Presenter {
 
     TenantInterface.View view;
-    AddTenantFragment addTenantFragment;
+    TenantInterface.FragmentView tenantFragment;
 
     public TenantPresenter(TenantsActivity tenantsActivity) {
         view = tenantsActivity;
     }
 
-    public TenantPresenter(TenantInterface.FragmentView addTenantFragment) {
-        this.addTenantFragment = (AddTenantFragment) addTenantFragment;
+    public TenantPresenter(TenantInterface.FragmentView tenantFragment) {
+        this.tenantFragment = tenantFragment;
     }
 
     @Override
@@ -20,11 +20,26 @@ public class TenantPresenter implements TenantInterface.Presenter {
 
     @Override
     public void initSpinner() {
-        addTenantFragment.initSpinnerConfirm();
+        tenantFragment.initSpinnerConfirm();
     }
 
     @Override
     public void addTenant() {
-        addTenantFragment.addTenantConfirm();
+        tenantFragment.addTenantConfirm();
+    }
+
+    @Override
+    public void initRV() {
+        view.initRVConfirm();
+    }
+
+    @Override
+    public void getTenant() {
+        view.getTenantConfirm();
+    }
+
+    @Override
+    public void sendMessage() {
+        tenantFragment.sendMessageConfirm();
     }
 }
