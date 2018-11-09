@@ -16,13 +16,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
+<!--        <ImageButton
             android:id="@+id/ib_contact"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_gravity="end"
             android:layout_marginEnd="15dp"
-            android:src="@drawable/ic_contact_black_24dp" />
+            android:src="@drawable/ic_contact_black_24dp" />-->
 
         <ImageButton
             android:id="@+id/ib_add_tenant"
