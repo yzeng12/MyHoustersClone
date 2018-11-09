@@ -32,6 +32,7 @@
             android:src="@drawable/logo_bell" />
 
         <ImageView
+            android:id="@+id/icon_properties"
             android:layout_weight="1"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -90,17 +91,20 @@
             android:layout_height="wrap_content">
 
             <ImageView
+                android:id="@+id/icon_transactions"
                 android:layout_weight="1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/logo_transaction1" />
 
             <ImageView
+                android:id="@+id/icon_collectRent"
                 android:layout_weight="1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/logo_rent" />
             <ImageView
+                android:id="@+id/icon_toDoList"
                 android:layout_weight="1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
@@ -155,17 +159,20 @@
             android:layout_height="wrap_content">
 
             <ImageView
+                android:id="@+id/icon_trips"
                 android:layout_weight="1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/logo_car" />
 
             <ImageView
+                android:id="@+id/icon_documents"
                 android:layout_weight="1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/logo_documents" />
             <ImageView
+                android:id="@+id/icon_vendors"
                 android:layout_weight="1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"

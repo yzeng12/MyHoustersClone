@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:background="#cccaca"
+            android:textAlignment="center"
+            android:text="Add property below"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+
+        <EditText
+            android:id="@+id/et_address_AP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="address" />
+
+        <EditText
+            android:id="@+id/et_city_AP"
+            android:hint="city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_state_AP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="state" />
+
+        <EditText
+            android:id="@+id/et_country_AP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="country" />
+
+        <EditText
+            android:id="@+id/et_pro_status_AP"
+            android:hint="pro_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_purchasePrice_AP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="purchase price" />
+
+        <EditText
+            android:id="@+id/et_mortgage_AP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="mortgage" />
+
+
+
+        <EditText
+            android:id="@+id/et_latitude_AP"
+            android:hint="latitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_longitude_AP"
+            android:hint="longitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+
+        <Button
+            android:id="@+id/btn_AddProperty_AP"
+            android:layout_gravity="center"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</ScrollView>

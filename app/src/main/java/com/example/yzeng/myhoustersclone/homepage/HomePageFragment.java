@@ -10,7 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.yzeng.myhoustersclone.Document.DocumentsActivity;
 import com.example.yzeng.myhoustersclone.R;
+import com.example.yzeng.myhoustersclone.TodoList.TodoListActivity;
 import com.example.yzeng.myhoustersclone.tenant.TenantsActivity;
 import com.github.mikephil.charting.charts.HorizontalBarChart;
 import com.github.mikephil.charting.charts.PieChart;
@@ -28,7 +30,7 @@ import java.util.List;
 
 public class HomePageFragment extends Fragment {
 
-    ImageView icon_alerts, icon_tenant;
+    ImageView icon_alerts, icon_tenant,icon_properties,icon_transactions,icon_collectRent,icon_toDoList,icon_trips,icon_documents,icon_vendors;
     private PieChart pieChart;
     private HorizontalBarChart barChart;
     @Nullable
@@ -42,6 +44,13 @@ public class HomePageFragment extends Fragment {
         barChart = view.findViewById(R.id.horizontal_barChart);
         icon_alerts = view.findViewById(R.id.icon_alerts);
         icon_tenant = view.findViewById(R.id.icon_tenants);
+        icon_properties = view.findViewById(R.id.icon_properties);
+        icon_transactions = view.findViewById(R.id.icon_transactions);
+        icon_collectRent = view.findViewById(R.id.icon_collectRent);
+        icon_toDoList = view.findViewById(R.id.icon_toDoList);
+        icon_trips = view.findViewById(R.id.icon_trips);
+        icon_documents = view.findViewById(R.id.icon_documents);
+        icon_vendors = view.findViewById(R.id.icon_vendors);
 
 
         addPieChart();
@@ -54,12 +63,54 @@ public class HomePageFragment extends Fragment {
                 startActivity(new Intent(getActivity(),AlertsActivity.class));
             }
         });
+        icon_properties.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(),PropertiesActivity.class));
+            }
+        });
 
         icon_tenant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), TenantsActivity.class);
                 startActivity(i);
+            }
+        });
+        icon_transactions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               // startActivity(new Intent(getActivity(),PropertiesActivity.class));
+            }
+        });
+        icon_collectRent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               // startActivity(new Intent(getActivity(),PropertiesActivity.class));
+            }
+        });
+        icon_toDoList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(),TodoListActivity.class));
+            }
+        });
+        icon_trips.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               // startActivity(new Intent(getActivity(),PropertiesActivity.class));
+            }
+        });
+        icon_documents.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(),DocumentsActivity.class));
+            }
+        });
+        icon_vendors.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               // startActivity(new Intent(getActivity(),PropertiesActivity.class));
             }
         });
 
