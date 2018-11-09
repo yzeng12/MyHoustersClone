@@ -1,5 +1,7 @@
 package com.example.yzeng.myhoustersclone.network_retrofit;
 
+import com.example.yzeng.myhoustersclone.homepage.PropertyAddResponse;
+import com.example.yzeng.myhoustersclone.homepage.PropertyListResponse;
 import com.example.yzeng.myhoustersclone.pojo.ForgotPasswordPOJO;
 
 import com.example.yzeng.myhoustersclone.pojo.LoginReturnPOJO;
@@ -48,4 +50,21 @@ public interface ApiService {
     @GET("/aamir/property-mgmt/pro_mgt_contact_tenants.php?")
     Call<TenantContactResponse> getTenantContact(@Query("name") String name, @Query("email") String email,
                                                  @Query("address") String address, @Query("mobile") String mobile);
+
+    @GET("/aamir/property-mgmt/pro_mgt_add_pro.php?")
+    Call<PropertyAddResponse> getMessage(@Query("address") String address, @Query("city") String city, @Query("state") String state,
+                                         @Query("country") String country, @Query("pro_status") String pro_status,
+                                         @Query("purchase_price") String purchasePrice, @Query("mortage_info") String mortgage,
+                                         @Query("userid") String userId, @Query("usertype") String userType, @Query("latitude") String latitude,
+                                         @Query("longitude") String longitude);
+
+
+    @GET("/aamir/property-mgmt/property.php?")
+    Call<PropertyListResponse> getPropertyDetails(@Query("userid") String userId, @Query("usertype") String userType);
+
+    //http://rjtmobile.com/aamir/property-mgmt/remove-property.php?
+    @GET("/aamir/property-mgmt/remove-property.php?")
+    Call<PropertyAddResponse> getRemoveMessage(@Query("propertyid") String propertyId);
+
+
 }
