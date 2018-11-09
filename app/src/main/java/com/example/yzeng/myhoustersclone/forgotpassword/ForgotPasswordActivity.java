@@ -63,7 +63,7 @@ public class ForgotPasswordActivity extends AppCompatActivity implements ForgotP
                 ForgotPasswordPOJO forgotPasswordPOJO = response.body();
 
                 if (forgotPasswordPOJO.getPassword() != null) {
-                    Log.i("MainActivity", "onResponse: " + forgotPasswordPOJO.toString());
+                    Log.i("TransactionActivity", "onResponse: " + forgotPasswordPOJO.toString());
                     AlertDialog dialog = new AlertDialog.Builder(ForgotPasswordActivity.this).setMessage("Your Email: "+forgotPasswordPOJO.getEmail()+"\n"
                             +"Your Password: "+forgotPasswordPOJO.getPassword())
                             .setTitle("Your INFO").setPositiveButton("ok", new DialogInterface.OnClickListener() {
@@ -80,7 +80,7 @@ public class ForgotPasswordActivity extends AppCompatActivity implements ForgotP
 
 
                 } else {
-                    Log.i("MainActivity", "onResponse: " + response.body().toString());
+                    Log.i("TransactionActivity", "onResponse: " + response.body().toString());
                     Toast.makeText(ForgotPasswordActivity.this, "UserName or Password Incorrect", Toast.LENGTH_SHORT).show();
                 }
             }

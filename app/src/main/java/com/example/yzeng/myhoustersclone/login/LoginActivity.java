@@ -137,7 +137,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
                 LoginReturnPOJO loginReturnPOJO = response.body();
 
                 if(loginReturnPOJO.getAppapikey() != null) {
-                    Log.i("MainActivity", "onResponse: " + loginReturnPOJO.toString());
+                    Log.i("TransactionActivity", "onResponse: " + loginReturnPOJO.toString());
                     mySharedPrefences.setUserInfo(LoginActivity.this, loginReturnPOJO.getUserid(), loginReturnPOJO.getUsertype(),
                             loginReturnPOJO.getUseremail(), loginReturnPOJO.getAppapikey(), etPassword.getText().toString());
                     //TODO
@@ -148,7 +148,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
 
 
                 } else {
-                    Log.i("MainActivity", "onResponse: " + response.body().toString());
+                    Log.i("TransactionActivity", "onResponse: " + response.body().toString());
                     Toast.makeText(LoginActivity.this, "UserName or Password Incorrect", Toast.LENGTH_SHORT).show();
                 }
             }
