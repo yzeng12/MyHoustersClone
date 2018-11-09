@@ -32,7 +32,7 @@ public class TenantsActivity extends AppCompatActivity implements TenantInterfac
         imageButtonAddTenant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.ll_document_activity,
+                getSupportFragmentManager().beginTransaction().replace(R.id.content_tenant_home,
                         new AddTenantFragment(), null).addToBackStack(null).commit();
                 toolbar.setTitle("Add Tenant");
             }
