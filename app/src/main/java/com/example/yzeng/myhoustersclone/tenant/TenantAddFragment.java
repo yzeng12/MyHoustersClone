@@ -30,7 +30,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class AddTenantFragment extends Fragment implements TenantInterface.FragmentView, AdapterView.OnItemSelectedListener {
+public class TenantAddFragment extends Fragment implements TenantInterface.FragmentView, AdapterView.OnItemSelectedListener {
 
     Spinner spinner;
     TenantPresenter tenantPresenter;
@@ -42,7 +42,7 @@ public class AddTenantFragment extends Fragment implements TenantInterface.Fragm
     private List<String> list;
     MySharedPrefences mySharedPrefences;
 
-    private static final String TAG = "AddTenantFragment";
+    private static final String TAG = "TenantAddFragment";
 
     @Nullable
     @Override
@@ -114,6 +114,11 @@ public class AddTenantFragment extends Fragment implements TenantInterface.Fragm
                 Log.i(TAG, String.valueOf(t));
             }
         });
+    }
+
+    @Override
+    public void sendMessageConfirm() {
+
     }
 
     @Override
