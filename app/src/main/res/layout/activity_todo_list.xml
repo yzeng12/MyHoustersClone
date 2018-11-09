@@ -6,4 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".TodoList.TodoListActivity">
 
+    <include
+        layout="@layout/tenant_home_toolbar_layout"
+        />
+
+
+    <FrameLayout
+        android:id="@+id/TodoList_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"></FrameLayout>
+
 </android.support.constraint.ConstraintLayout>

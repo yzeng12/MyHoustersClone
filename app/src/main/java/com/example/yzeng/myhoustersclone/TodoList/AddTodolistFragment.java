@@ -1,48 +1,28 @@
-package com.example.yzeng.myhoustersclone.Document;
+package com.example.yzeng.myhoustersclone.TodoList;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.yzeng.myhoustersclone.DataBase.DataBaseDao;
 import com.example.yzeng.myhoustersclone.DataBase.OurRoomDataBase;
 import com.example.yzeng.myhoustersclone.R;
-import com.example.yzeng.myhoustersclone.network_retrofit.ApiService;
-import com.example.yzeng.myhoustersclone.network_retrofit.RetrofitInstance;
-import com.example.yzeng.myhoustersclone.tenant.TenantInterface;
-import com.example.yzeng.myhoustersclone.tenant.TenantPresenter;
-import com.example.yzeng.myhoustersclone.ui_and_other.MySharedPrefences;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
-public class AddDocumentFragment extends Fragment implements DocumentInterface.FragmentView {
+public class AddTodolistFragment extends Fragment implements TodoListInterface.FragmentView {
     ImageView imageView;
-    DocumentPresenter documentPresenter;
+    TodoListPresenter todoListPresenter;
     Button buttonadd,buttonpic;
     EditText editTextName, editTextType;
     View view;
@@ -54,18 +34,18 @@ public class AddDocumentFragment extends Fragment implements DocumentInterface.F
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_add_document,
                 container, false);
-        documentPresenter = new DocumentPresenter(this);
-        documentPresenter.initFragView();
+        todoListPresenter = new TodoListPresenter(this);
+        todoListPresenter.initFragView();
         buttonpic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                documentPresenter.TakePic();
+                todoListPresenter.TakePic();
             }
         });
         buttonadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                documentPresenter.addDocument();
+                todoListPresenter.addDocument();
             }
         });
 
@@ -91,17 +71,18 @@ public class AddDocumentFragment extends Fragment implements DocumentInterface.F
 
     @Override
     public void addConfirm() {
-        DataBaseDocument document=new DataBaseDocument(
-                editTextName.getText().toString(),editTextType.getText().toString());
+//        DataBaseTodoList todoList=new DataBaseTodoList(
+//                editTextName.getText().toString(),editTextType.getText().toString());
 
 
-        insert(document);
+ //       insert(todoList);
     }
-    public void insert(DataBaseDocument dataBaseDocument) {
+    public void insert(DataBaseTodoList dataBaseDocument) {
         new insertAsyncTask(Dao).execute(dataBaseDocument);
         Toast.makeText(getActivity(), "Add Document Success", Toast.LENGTH_LONG).show();
     }
-    private static class insertAsyncTask extends AsyncTask<DataBaseDocument, Void, Void> {
+
+    private static class insertAsyncTask extends AsyncTask<DataBaseTodoList, Void, Void> {
 
         private DataBaseDao mAsyncTaskDao;
 
@@ -110,8 +91,8 @@ public class AddDocumentFragment extends Fragment implements DocumentInterface.F
         }
 
         @Override
-        protected Void doInBackground(final DataBaseDocument... params) {
-            mAsyncTaskDao.insertDocument(params[0]);
+        protected Void doInBackground(final DataBaseTodoList... params) {
+//            mAsyncTaskDao.insertDocument(params[0]);
             return null;
         }
     }

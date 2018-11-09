@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardBackgroundColor="#89a7df"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="5dp"
+    card_view:cardUseCompatPadding="true"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/small_size">
+        <TextView
+            android:layout_marginStart="@dimen/small_size"
+            android:id="@+id/tv_document_detail_name"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/large_size"
+            android:layout_weight="1"
+            android:text="Name"
+            />
+
+        <TextView
+            android:id="@+id/tv_document_detail_type"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/large_size"
+            android:layout_weight="1"
+        android:layout_marginStart="@dimen/small_size"
+            android:text="Type" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_document_detail_clickfordetail"
+
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/medium_size"
+            android:layout_gravity="center_vertical"
+
+            android:text="clickfordetail" />
+    </LinearLayout>
+</LinearLayout>
+</android.support.v7.widget.CardView>
