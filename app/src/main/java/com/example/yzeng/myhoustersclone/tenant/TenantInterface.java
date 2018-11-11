@@ -1,5 +1,7 @@
 package com.example.yzeng.myhoustersclone.tenant;
 
+import java.util.List;
+
 public interface TenantInterface {
     
     interface View{
@@ -8,6 +10,8 @@ public interface TenantInterface {
         void initRVConfirm();
 
         void getTenantConfirm();
+
+        void saveTenantConfirm(List<TenantPOJO> mList);
     }
     
     interface Presenter{
@@ -22,6 +26,10 @@ public interface TenantInterface {
         void getTenant();
 
         void sendMessage();
+
+        void saveTenant(List<TenantPOJO> mList);
+
+        void initSpinner(List<DatabaseTenant> aVoid);
     }
     
     interface FragmentView{
@@ -31,5 +39,7 @@ public interface TenantInterface {
         void addTenantConfirm();
 
         void sendMessageConfirm();
+
+        void initSpinnerConfirm(List<DatabaseTenant> aVoid);
     }
 }

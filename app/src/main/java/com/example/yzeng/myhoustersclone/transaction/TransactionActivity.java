@@ -36,7 +36,6 @@ public class TransactionActivity extends AppCompatActivity implements Transactio
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.transaction_content, new TransactionListFragment())
-                .addToBackStack(null)
                 .commit();
 
         db = OurRoomDataBase.getDatabase(this);

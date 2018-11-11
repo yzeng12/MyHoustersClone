@@ -1,5 +1,6 @@
 package com.example.yzeng.myhoustersclone.tenant;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentManager;
@@ -12,6 +13,8 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.yzeng.myhoustersclone.DataBase.DataBaseDao;
+import com.example.yzeng.myhoustersclone.DataBase.OurRoomDataBase;
 import com.example.yzeng.myhoustersclone.R;
 import com.example.yzeng.myhoustersclone.network_retrofit.ApiService;
 import com.example.yzeng.myhoustersclone.network_retrofit.RetrofitInstance;
@@ -32,6 +35,8 @@ public class TenantsActivity extends AppCompatActivity implements TenantInterfac
     TenantRVAdapter tenantRVAdapter;
     List<TenantPOJO> mList;
     FloatingActionButton fab;
+    private OurRoomDataBase db;
+    private DataBaseDao Dao;
 
     private static final String TAG = "TenantsActivity";
 
@@ -41,6 +46,9 @@ public class TenantsActivity extends AppCompatActivity implements TenantInterfac
         setContentView(R.layout.activity_tenants);
         toolbar = findViewById(R.id.toolbar_tenant);
         imageButtonAddTenant = findViewById(R.id.ib_add_tenant);
+
+        db = OurRoomDataBase.getDatabase(this);
+        Dao = db.DatabaseDao();
 
         recyclerView = findViewById(R.id.rv_tenant_home);
         mList = new ArrayList<>();
@@ -66,6 +74,7 @@ public class TenantsActivity extends AppCompatActivity implements TenantInterfac
 
             }
         });
+
     }
 
     @Override
@@ -108,17 +117,13 @@ public class TenantsActivity extends AppCompatActivity implements TenantInterfac
                 TenantResponse tenantResponse = response.body();
                 mList = tenantResponse.getTenantPOJOList();
 
-                Log.i(TAG, String.valueOf(tenantResponse));
-
-                for (int i = 0; i < mList.size(); i++) {
-                    Log.i("???",     String.valueOf(mList.get(i)));
-                }
-
                 tenantRVAdapter = new TenantRVAdapter(mList);
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(TenantsActivity.this));
 
                 recyclerView.setAdapter(tenantRVAdapter);
+
+                tenantPresenter.saveTenant(mList);
 
             }
 
@@ -129,7 +134,35 @@ public class TenantsActivity extends AppCompatActivity implements TenantInterfac
             }
         });
 
+    }    @Override
+    public void saveTenantConfirm(List<TenantPOJO> mList) {
+        getAsyncTask ga = new getAsyncTask(Dao);
+        ga.execute(mList);
     }
+
+    private class getAsyncTask extends AsyncTask<List<TenantPOJO>, Void, Void> {
+
+        private DataBaseDao mAsyncTaskDao;
+
+        getAsyncTask(DataBaseDao dao) {
+            mAsyncTaskDao = dao;
+        }
+
+        @Override
+        protected Void doInBackground(List<TenantPOJO>... voids) {
+            List<TenantPOJO> list = voids[0];
+            for (int i = 0; i < list.size(); i++) {
+                TenantPOJO tenantPOJO = list.get(i);
+                DatabaseTenant databaseTenant = new DatabaseTenant(tenantPOJO.getTenantname(),
+                        tenantPOJO.getTenantemail(), tenantPOJO.getTenantaddress(), tenantPOJO.getTenantmobile());
+                mAsyncTaskDao.insertTenant(databaseTenant);
+            }
+            return null;
+        }
+    }
+
+
+
 
     @Override
     public void onBackPressed() {

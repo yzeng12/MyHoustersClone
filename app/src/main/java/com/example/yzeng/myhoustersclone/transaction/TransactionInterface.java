@@ -15,7 +15,7 @@ public class TransactionInterface {
 
         void TakePic();
 
-        void addDocument();
+        void addTransaction();
     }
 
     interface View{
@@ -30,6 +30,8 @@ public class TransactionInterface {
         void spinnerInitConfirm();
 
         void initDatabaseConfirm();
+
+        void addTransactionConfirm();
     }
 
 }
