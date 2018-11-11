@@ -1,6 +1,7 @@
 package com.example.yzeng.myhoustersclone.homepage;
 
 import android.content.DialogInterface;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -14,10 +15,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.yzeng.myhoustersclone.DataBase.DataBaseDao;
+import com.example.yzeng.myhoustersclone.DataBase.OurRoomDataBase;
 import com.example.yzeng.myhoustersclone.R;
 import com.example.yzeng.myhoustersclone.network_retrofit.ApiService;
 import com.example.yzeng.myhoustersclone.network_retrofit.RetrofitInstance;
+import com.example.yzeng.myhoustersclone.pojo.PropertyTable;
 import com.example.yzeng.myhoustersclone.ui_and_other.MySharedPrefences;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -29,11 +36,14 @@ public class AddPropertyFragment extends Fragment {
     Button btn_AddPrperty_AP;
     MySharedPrefences mySharedPrefences;
 
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_add_property, container, false);
+
+
 
         mySharedPrefences = new MySharedPrefences();
 
@@ -104,6 +114,10 @@ public class AddPropertyFragment extends Fragment {
 
                         }
                     });
+
+                   // PropertyTable propertyTable = new PropertyTable();
+                   // insert(propertyTable);
+
                 }
             }
         });
@@ -111,4 +125,5 @@ public class AddPropertyFragment extends Fragment {
 
         return view;
     }
+
 }

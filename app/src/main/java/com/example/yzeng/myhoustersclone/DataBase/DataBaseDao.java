@@ -11,6 +11,7 @@ import com.example.yzeng.myhoustersclone.TodoList.DataBaseTodoList;
 import com.example.yzeng.myhoustersclone.tenant.DatabaseTenant;
 import com.example.yzeng.myhoustersclone.transaction.DataBaseTransaction;
 import com.example.yzeng.myhoustersclone.pojo.PropertyTable;
+import com.example.yzeng.myhoustersclone.pojo.PropertyTable;
 
 import java.util.List;
 
@@ -59,6 +60,12 @@ public interface DataBaseDao {
     @Query("SELECT question from DataBaseDocument ")
     //List<String> getQuestion();
     String[] getQuestion();*/
+
+    @Insert
+    void insertProperty(PropertyTable property);
+
+    @Query("DELETE FROM PropertyTable")
+    void delete();
 
 
 }
