@@ -60,7 +60,7 @@ public interface DataBaseDao {
     //List<String> getQuestion();
     String[] getQuestion();*/
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertProperty(PropertyTable property);
 
     @Query("DELETE FROM PropertyTable")

@@ -145,6 +145,7 @@ public class PropertyListFragment extends Fragment {
 
         private DataBaseDao mAsyncTaskDao;
 
+
         public insertAsyncTask(DataBaseDao dao) {
 
             mAsyncTaskDao = dao;
@@ -152,6 +153,7 @@ public class PropertyListFragment extends Fragment {
 
         @Override
         protected Void doInBackground(PropertyTable... propertyTables) {
+           // mAsyncTaskDao.delete();
             mAsyncTaskDao.insertProperty(propertyTables[0]);
             return null;
         }
