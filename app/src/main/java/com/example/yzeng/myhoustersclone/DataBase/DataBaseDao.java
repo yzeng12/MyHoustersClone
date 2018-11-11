@@ -11,7 +11,6 @@ import com.example.yzeng.myhoustersclone.TodoList.DataBaseTodoList;
 import com.example.yzeng.myhoustersclone.tenant.DatabaseTenant;
 import com.example.yzeng.myhoustersclone.transaction.DataBaseTransaction;
 import com.example.yzeng.myhoustersclone.pojo.PropertyTable;
-import com.example.yzeng.myhoustersclone.pojo.PropertyTable;
 
 import java.util.List;
 
