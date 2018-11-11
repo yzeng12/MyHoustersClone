@@ -15,6 +15,7 @@ import com.example.yzeng.myhoustersclone.R;
 import com.example.yzeng.myhoustersclone.TodoList.TodoListActivity;
 import com.example.yzeng.myhoustersclone.tenant.TenantsActivity;
 import com.example.yzeng.myhoustersclone.transaction.TransactionActivity;
+import com.example.yzeng.myhoustersclone.trip.TripActivity;
 import com.github.mikephil.charting.charts.HorizontalBarChart;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Description;
@@ -78,42 +79,7 @@ public class HomePageFragment extends Fragment {
                 startActivity(i);
             }
         });
-        icon_transactions.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               // startActivity(new Intent(getActivity(),PropertiesActivity.class));
-            }
-        });
-        icon_collectRent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               // startActivity(new Intent(getActivity(),PropertiesActivity.class));
-            }
-        });
-        icon_toDoList.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(),TodoListActivity.class));
-            }
-        });
-        icon_trips.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               // startActivity(new Intent(getActivity(),PropertiesActivity.class));
-            }
-        });
-        icon_documents.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(),DocumentsActivity.class));
-            }
-        });
-        icon_vendors.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               // startActivity(new Intent(getActivity(),PropertiesActivity.class));
-            }
-        });
+
         icon_transactions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -135,7 +101,7 @@ public class HomePageFragment extends Fragment {
         icon_trips.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // startActivity(new Intent(getActivity(),PropertiesActivity.class));
+                startActivity(new Intent(getActivity(),TripActivity.class));
             }
         });
         icon_documents.setOnClickListener(new View.OnClickListener() {
