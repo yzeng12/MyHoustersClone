@@ -1,5 +1,7 @@
 package com.example.yzeng.myhoustersclone.tenant;
 
+import java.util.List;
+
 public class TenantPresenter implements TenantInterface.Presenter {
 
     TenantInterface.View view;
@@ -16,11 +18,6 @@ public class TenantPresenter implements TenantInterface.Presenter {
     @Override
     public void initView() {
         view.initViewConfirm();
-    }
-
-    @Override
-    public void initSpinner() {
-        tenantFragment.initSpinnerConfirm();
     }
 
     @Override
@@ -41,5 +38,20 @@ public class TenantPresenter implements TenantInterface.Presenter {
     @Override
     public void sendMessage() {
         tenantFragment.sendMessageConfirm();
+    }
+
+    @Override
+    public void saveTenant(List<TenantPOJO> mList) {
+        view.saveTenantConfirm(mList);
+    }
+
+    @Override
+    public void initSpinner() {
+        tenantFragment.initSpinnerConfirm();
+    }
+
+    @Override
+    public void initSpinner(List<DatabaseTenant> aVoid) {
+        tenantFragment.initSpinnerConfirm(aVoid);
     }
 }

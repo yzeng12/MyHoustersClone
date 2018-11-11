@@ -44,8 +44,8 @@ public class TransactionPresenter implements TransactionInterface.Presenter{
     }
 
     @Override
-    public void addDocument() {
-
+    public void addTransaction() {
+        fragmentView.addTransactionConfirm();
     }
 
 }

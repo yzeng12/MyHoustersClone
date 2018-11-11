@@ -38,7 +38,7 @@ public class TransactionListFragment extends Fragment implements TransactionInte
     private OurRoomDataBase db;
     private DataBaseDao Dao;
     RecyclerView rv;
-    List<DataBaseDocument> list;
+    List<DataBaseTransaction> list;
     View view;
 
     @Nullable
@@ -46,8 +46,8 @@ public class TransactionListFragment extends Fragment implements TransactionInte
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_transaction_content,
                 container, false);
-        db = OurRoomDataBase.getDatabase(getActivity());
         rv=view.findViewById(R.id.rv_Transaction);
+        db = OurRoomDataBase.getDatabase(getActivity());
         Dao = db.DatabaseDao();
         transactionPresenter = new TransactionPresenter(this);
 
@@ -57,10 +57,37 @@ public class TransactionListFragment extends Fragment implements TransactionInte
         return view;
     }
 
+    @Override
+    public void getData() {
+        getAsyncTask ga = new getAsyncTask(Dao);
+        ga.execute();
+    }
+
+    private class getAsyncTask extends AsyncTask<Void, Void, Void> {
+
+        private DataBaseDao mAsyncTaskDao;
+
+        getAsyncTask(DataBaseDao dao) {
+            mAsyncTaskDao = dao;
+        }
+
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            list =mAsyncTaskDao.getAllTransaction();
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+            transactionPresenter.rvadapter();
+        }
+    }
 
     @Override
     public void rvadapterconfirm() {
-        DocumentListAdapter adapter = new DocumentListAdapter(getActivity(), list);
+        TransactionListAdapter adapter = new TransactionListAdapter(getContext(), list);
         //RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayout.VERTICAL, false);
         RecyclerView.LayoutManager layoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         rv.setLayoutManager(layoutManager);
@@ -78,30 +105,7 @@ public class TransactionListFragment extends Fragment implements TransactionInte
     }
 
     @Override
-    public void getData() {
-        getAsyncTask ee = new getAsyncTask(Dao);
-        ee.execute();
-    }
+    public void addTransactionConfirm() {
 
-    private class getAsyncTask extends AsyncTask<Void, Void, Void> {
-
-        private DataBaseDao mAsyncTaskDao;
-
-        getAsyncTask(DataBaseDao dao) {
-            mAsyncTaskDao = dao;
-        }
-
-
-        @Override
-        protected Void doInBackground(Void... voids) {
-            list =mAsyncTaskDao.getAllDocument();
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void aVoid) {
-            super.onPostExecute(aVoid);
-            transactionPresenter.rvadapter();
-        }
     }
 }

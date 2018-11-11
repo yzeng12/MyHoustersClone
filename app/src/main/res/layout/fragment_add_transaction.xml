@@ -69,7 +69,7 @@
             android:maxHeight="400dp"
             android:maxWidth="400dp"
             />
-        <Button
+<!--        <Button
             android:id="@+id/btn_transaction_picture"
             android:layout_width="@dimen/button_normal"
             android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
             android:padding="@dimen/small_size"
             android:layout_margin="@dimen/medium_size"
             android:textAllCaps="false"
-            />
+            />-->
 
         <TextView
             android:layout_width="match_parent"

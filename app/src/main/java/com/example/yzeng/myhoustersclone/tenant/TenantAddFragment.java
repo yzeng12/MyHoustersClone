@@ -88,6 +88,8 @@ public class TenantAddFragment extends Fragment implements TenantInterface.Fragm
         spinner.setOnItemSelectedListener(this);
     }
 
+
+
     @Override
     public void addTenantConfirm() {
 
@@ -118,6 +120,11 @@ public class TenantAddFragment extends Fragment implements TenantInterface.Fragm
 
     @Override
     public void sendMessageConfirm() {
+
+    }
+
+    @Override
+    public void initSpinnerConfirm(List<DatabaseTenant> aVoid) {
 
     }
 
