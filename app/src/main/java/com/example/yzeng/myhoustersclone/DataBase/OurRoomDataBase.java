@@ -10,7 +10,7 @@ import com.example.yzeng.myhoustersclone.Document.DataBaseDocument;
 import com.example.yzeng.myhoustersclone.TodoList.DataBaseTodoList;
 import com.example.yzeng.myhoustersclone.pojo.PropertyTable;
 
-@Database (entities = {DataBaseDocument.class,DataBaseTodoList.class,PropertyTable.class},version = 2 )
+@Database (entities = {DataBaseDocument.class,DataBaseTodoList.class,PropertyTable.class},version = 5 )
 public abstract class OurRoomDataBase extends RoomDatabase {
     public abstract DataBaseDao DatabaseDao();
     private static OurRoomDataBase INSTANCE;

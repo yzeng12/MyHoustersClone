@@ -2,6 +2,7 @@ package com.example.yzeng.myhoustersclone.DataBase;
 
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Insert;
+import android.arch.persistence.room.OnConflictStrategy;
 import android.arch.persistence.room.Query;
 
 import com.example.yzeng.myhoustersclone.Document.DataBaseDocument;
@@ -39,7 +40,7 @@ public interface DataBaseDao {
     //List<String> getQuestion();
     String[] getQuestion();*/
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertProperty(PropertyTable property);
 
     @Query("DELETE FROM PropertyTable")

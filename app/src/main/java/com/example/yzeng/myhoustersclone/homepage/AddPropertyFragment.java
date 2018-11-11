@@ -1,11 +1,16 @@
 package com.example.yzeng.myhoustersclone.homepage;
 
+import android.Manifest;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -22,6 +27,10 @@ import com.example.yzeng.myhoustersclone.network_retrofit.ApiService;
 import com.example.yzeng.myhoustersclone.network_retrofit.RetrofitInstance;
 import com.example.yzeng.myhoustersclone.pojo.PropertyTable;
 import com.example.yzeng.myhoustersclone.ui_and_other.MySharedPrefences;
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.location.places.ui.PlacePicker;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,12 +39,15 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static android.app.Activity.RESULT_OK;
+
 public class AddPropertyFragment extends Fragment {
 
     EditText et_address, et_city, et_state, et_mortgage, et_country, et_pro_status, et_purchasePrice, et_latitude, et_longitude;
-    Button btn_AddPrperty_AP;
+    Button btn_AddPrperty_AP,btn_pickPlace;
     MySharedPrefences mySharedPrefences;
-
+    private final static int MY_PERMISSION_FINE_LOCATION = 101;
+    private final static int PLACE_PICKER_REQUEST = 1;
 
     @Nullable
     @Override
@@ -58,6 +70,29 @@ public class AddPropertyFragment extends Fragment {
         et_longitude = view.findViewById(R.id.et_longitude_AP);
 
         btn_AddPrperty_AP = view.findViewById(R.id.btn_AddProperty_AP);
+        btn_pickPlace = view.findViewById(R.id.btn_pickPlace_AP);
+
+        requestPermission();
+
+
+        btn_pickPlace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
+                // builder.setLatLngBounds(bounds);
+                try {
+                    Intent intent = builder.build(getActivity());
+                    startActivityForResult(intent, PLACE_PICKER_REQUEST);
+                } catch (GooglePlayServicesRepairableException e) {
+                    e.printStackTrace();
+                } catch (GooglePlayServicesNotAvailableException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+
 
         btn_AddPrperty_AP.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,6 +159,42 @@ public class AddPropertyFragment extends Fragment {
 
 
         return view;
+    }
+
+    public void requestPermission() {
+        if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSION_FINE_LOCATION);
+        } else {
+            Toast.makeText(getActivity(), "Permission Granted", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        switch (requestCode) {
+            case MY_PERMISSION_FINE_LOCATION:
+                if (grantResults[0] != PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(getActivity(), "This app requires location permissions to be granted", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                break;
+        }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == PLACE_PICKER_REQUEST)
+        {
+            if ((resultCode == RESULT_OK))
+            {
+                Place place = PlacePicker.getPlace(getActivity(),data);
+                Toast.makeText(getActivity(), "" + place.getName() , Toast.LENGTH_LONG).show();
+            }
+        }
     }
 
 }
