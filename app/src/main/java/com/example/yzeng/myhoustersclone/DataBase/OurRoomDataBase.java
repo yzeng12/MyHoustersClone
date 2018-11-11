@@ -14,8 +14,7 @@ import com.example.yzeng.myhoustersclone.transaction.DataBaseTransaction;
 import com.example.yzeng.myhoustersclone.pojo.PropertyTable;
 
 @Database (entities = {DataBaseDocument.class,DataBaseTodoList.class,
-        DataBaseTransaction.class, DatabaseTenant.class,PropertyTable.class},version = 2 )
-@Database (entities = {DataBaseDocument.class,DataBaseTodoList.class, DataBaseTripList.class},version = 1 )
+        DataBaseTransaction.class, DatabaseTenant.class,PropertyTable.class,DataBaseTripList.class},version = 2 )
 public abstract class OurRoomDataBase extends RoomDatabase {
     public abstract DataBaseDao DatabaseDao();
     private static OurRoomDataBase INSTANCE;

@@ -93,14 +93,13 @@ public class DataBaseTripList {
 
     @Override
     public String toString() {
-        return "DataBaseTrip" +
-                "id=" + id +
-                ", date='" + date + '\'' +
-                ", description='" + description + '\'' +
-                ", start_Address='" + start_Address + '\'' +
-                ", end_Address='" + end_Address + '\'' +
-                ", round_Trip='" + round_Trip + '\'' +
-                ", total_Mile='" + total_Mile + '\'' +
-                '}';
+        return "Trip" +
+                "id=" + id +"\n"+
+                "date: " + date + '\n' +
+                "description: " + description + '\n' +
+                "start_Address: " + start_Address + '\n' +
+                "end_Address: " + end_Address + '\n' +
+                "round_Trip: " + round_Trip + '\n' +
+                "total_Mile: " + total_Mile + '\n' ;
     }
 }
