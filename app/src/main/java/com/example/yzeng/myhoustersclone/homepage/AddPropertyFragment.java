@@ -192,7 +192,7 @@ public class AddPropertyFragment extends Fragment {
             if ((resultCode == RESULT_OK))
             {
                 Place place = PlacePicker.getPlace(getActivity(),data);
-                Toast.makeText(getActivity(), "" + place.getName() , Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "" + place.getAddress() , Toast.LENGTH_LONG).show();
             }
         }
     }
