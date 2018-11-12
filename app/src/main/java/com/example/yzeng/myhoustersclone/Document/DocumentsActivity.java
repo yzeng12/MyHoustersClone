@@ -34,8 +34,7 @@ public class DocumentsActivity extends AppCompatActivity implements DocumentInte
         imageButtonAddTenant = findViewById(R.id.ib_add_tenant);
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.Document_content, new DocumentListFragment()).
-                addToBackStack(null)
+                .replace(R.id.Document_content, new DocumentListFragment())
                 .commit();
 
         db = OurRoomDataBase.getDatabase(this);
