@@ -9,16 +9,18 @@ import android.support.annotation.NonNull;
 @Entity(tableName = "Tenant_Table")
 public class DatabaseTenant {
 
-    @PrimaryKey(autoGenerate = true)
+/*    @PrimaryKey(autoGenerate = true)
     @NonNull
     @ColumnInfo(name = "ID")
-    int id;
+    int id;*/
     @ColumnInfo(name = "Name")
     String name;
     @ColumnInfo(name = "Email")
     String email;
     @ColumnInfo(name = "Address")
     String address;
+    @PrimaryKey
+    @NonNull
     @ColumnInfo(name = "Mobile")
     String mobile;
 
@@ -29,14 +31,14 @@ public class DatabaseTenant {
         this.mobile = mobile;
     }
 
-    @NonNull
+/*    @NonNull
     public int getId() {
         return id;
     }
 
     public void setId(@NonNull int id) {
         this.id = id;
-    }
+    }*/
 
     public String getName() {
         return name;
@@ -62,6 +64,7 @@ public class DatabaseTenant {
         this.address = address;
     }
 
+    @NonNull
     public String getMobile() {
         return mobile;
     }

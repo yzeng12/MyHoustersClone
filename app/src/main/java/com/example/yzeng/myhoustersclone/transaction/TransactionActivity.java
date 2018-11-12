@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.example.yzeng.myhoustersclone.DataBase.DataBaseDao;
 import com.example.yzeng.myhoustersclone.DataBase.OurRoomDataBase;
@@ -21,7 +22,7 @@ public class TransactionActivity extends AppCompatActivity implements Transactio
 
     Toolbar toolbar;
     TransactionPresenter transactionPresenter;
-    ImageButton imageButtonAddTransaction;
+    ImageView imageButtonAddTransaction;
     private OurRoomDataBase db;
     private DataBaseDao Dao;
     RecyclerView rv;
@@ -32,6 +33,7 @@ public class TransactionActivity extends AppCompatActivity implements Transactio
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaction);
         toolbar = findViewById(R.id.toolbar_tenant);
+        toolbar.setTitle("Transaction List");
         imageButtonAddTransaction = findViewById(R.id.ib_add_tenant);
         getSupportFragmentManager()
                 .beginTransaction()
@@ -59,4 +61,9 @@ public class TransactionActivity extends AppCompatActivity implements Transactio
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        toolbar.setTitle("Transaction List");
+    }
 }

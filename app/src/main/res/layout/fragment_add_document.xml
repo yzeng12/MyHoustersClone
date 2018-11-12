@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Name"
+        android:hint="@string/name"
         android:padding="@dimen/medium_size"/>
 
         </android.support.design.widget.TextInputLayout>
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Type"
+        android:hint="@string/type"
         android:padding="@dimen/medium_size"
         />
 
@@ -52,7 +52,7 @@
             android:id="@+id/btn_Document_picture"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Take a picture"
+            android:text="@string/take_a_picture"
             android:textColor="@color/white"
             android:background="@color/colorPrimary"
             android:padding="@dimen/small_size"
@@ -63,7 +63,7 @@
             android:id="@+id/btn_Document_ADD"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Confirm add document"
+            android:text="@string/confirm_add_document"
             android:textColor="@color/white"
             android:background="@color/colorPrimary"
             android:padding="@dimen/small_size"

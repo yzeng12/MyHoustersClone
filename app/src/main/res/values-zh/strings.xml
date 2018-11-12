@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyHoustersClone</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="Welcome">欢迎来到我们的应用</string>
+    <string name="select_type">选择你的注册类型</string>
+    <string name="signup_email">电子邮箱</string>
+    <string name="signup_password">密码</string>
+    <string name="again_password">再次输入密码</string>
+    <string name="sign_up">注册</string>
+    <string name="landlord_email">房东邮箱</string>
+
+    <string name="Login">登录</string>
+    <string name="Login2Signup">新用户？ 注册</string>
+    <string name="Forgot_Password">忘记密码？</string>
+    <string name="Remember_me">记住我</string>
+
+    <string name="Properties">房产</string>
+    <string name="Add_Property">添加房产</string>
+    <string name="Add_property_below">在下方添加房产</string>
+    <string name="Add">添加</string>
+    <string name="Pick_Place">选择一个位置</string>
+    <string name="Remove_Property">删除这个房产？</string>
+
+    <string name="tenants">房客</string>
+
+    <string name="Transactions">交易</string>
+    <string name="To_Do_List">待做事项</string>
+    <string name="Trips">旅行</string>
+    <string name="Documents">文件</string>
+    <string name="collect_rent">收租</string>
+    <string name="alerts">警报</string>
+    <string name="vendors">供应商</string>
+    <string name="name">名字</string>
+    <string name="type">类型</string>
+    <string name="take_a_picture">拍照</string>
+    <string name="confirm_add_document">确认添加文件</string>
+    <string name="email">电子邮箱</string>
+    <string name="forgotpassword">忘记密码</string>
+    <string name="address">地址</string>
+    <string name="city">城市</string>
+    <string name="state">州</string>
+    <string name="country">郡</string>
+    <string name="pro_status">房产状态</string>
+    <string name="purchase_price">价格</string>
+    <string name="mortgage">抵押</string>
+    <string name="latitude">纬度</string>
+    <string name="longitude">经度</string>
+    <string name="step_1_choose_a_property">第一步，选择一个房产</string>
+    <string name="step_2_enter_tenants_information">第二步， 输入房客信息</string>
+    <string name="tenant_s_name">房客姓名</string>
+    <string name="tenant_s_email">房客邮箱</string>
+    <string name="tenant_s_address">房客地址</string>
+    <string name="tenant_s_mobile">房客电话</string>
+    <string name="add_tenant">添加房客</string>
+    <string name="step_1_select_tenant">第一步，选择一个房客</string>
+    <string name="step_2_enter_message">第二步，输入消息</string>
+    <string name="message_to_tenant">要发送的消息</string>
+    <string name="send_message">发送</string>
+    <string name="task_info">任务信息</string>
+    <string name="prority">优先级别</string>
+    <string name="summary">总结</string>
+    <string name="description">描述</string>
+    <string name="property">房产</string>
+    <string name="select_departure_date">选择出发日期</string>
+    <string name="take_picture">拍照</string>
+    <string name="cost_and_vendor_info">消费和供应商信息</string>
+    <string name="assign_to_vendor">分发给供应商</string>
+    <string name="estimate_cost">预估费用</string>
+    <string name="actual_cost">实际费用</string>
+    <string name="status_info">状态信息</string>
+    <string name="status">状态</string>
+    <string name="confirm_add_todolist">确定加入</string>
+    <string name="transaction_detail">交易明细</string>
+    <string name="select_transaction_date">选择交易日期</string>
+    <string name="summary2">总结</string>
+    <string name="description2">描述</string>
+    <string name="property2">房产</string>
+    <string name="payment_detail">费用明细</string>
+    <string name="choose_the_type_of_transaction">选择交易类型</string>
+    <string name="amount_of_payment">费用</string>
+    <string name="add_transaction">添加交易</string>
+    <string name="trip_description">旅行描述</string>
+    <string name="start_address">出发地址</string>
+    <string name="end_address">结束地址</string>
+    <string name="select_departure_date2">选择出发日期</string>
+    <string name="this_trip_is_round_trip">是否包含返程</string>
+    <string name="do_you_want_to_enter_the_total_miles">是否输入总里程</string>
+    <string name="confirm_add_trip">确认添加旅行</string>
+
+
+</resources>

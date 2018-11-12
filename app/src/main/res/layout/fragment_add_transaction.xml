@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="@dimen/text_size_20sp"
-            android:text="Transaction detail"
+            android:text="@string/transaction_detail"
             android:textStyle="bold|italic"
             android:paddingStart="@dimen/small_size"
             android:background="#b3b3b3"
@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="select_transaction_date"
+            android:hint="@string/select_transaction_date"
             android:textSize="@dimen/medium_size"
 
             android:drawableRight="@drawable/ic_calender"/>
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="summary"
+            android:hint="@string/summary2"
             android:padding="@dimen/medium_size"
             />
 
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="description"
+            android:hint="@string/description2"
             android:padding="@dimen/medium_size"
             />
         <EditText
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="property"
+            android:hint="@string/property2"
             android:padding="@dimen/medium_size"
             />
 
@@ -85,7 +85,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="@dimen/text_size_20sp"
-            android:text="Payment detail"
+            android:text="@string/payment_detail"
             android:textStyle="bold|italic"
             android:paddingStart="@dimen/small_size"
             android:background="#b3b3b3"
@@ -94,7 +94,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Choose the type of transaction"
+            android:text="@string/choose_the_type_of_transaction"
             android:layout_margin="@dimen/small_size"/>
 
         <Spinner
@@ -123,7 +123,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="Amount of payment"
+            android:hint="@string/amount_of_payment"
             android:padding="@dimen/medium_size"
             />
 
@@ -132,7 +132,7 @@
             android:layout_width="@dimen/button_normal"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Add transaction"
+            android:text="@string/add_transaction"
             android:textColor="@color/white"
             android:background="@color/colorPrimary"
             android:padding="@dimen/small_size"

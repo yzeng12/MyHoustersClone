@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,28 +9,22 @@
         android:id="@+id/toolbar_tenant"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        app:elevation="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-<!--        <ImageButton
-            android:id="@+id/ib_contact"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_gravity="end"
-            android:layout_marginEnd="15dp"
-            android:src="@drawable/ic_contact_black_24dp" />-->
-
-        <ImageButton
+        <ImageView
             android:id="@+id/ib_add_tenant"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_gravity="end"
             android:layout_marginEnd="15dp"
-            android:src="@drawable/ic_add_black_24dp" />
+            android:src="@drawable/ic_actionbar_add"/>
 
     </android.support.v7.widget.Toolbar>
 
-</android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>

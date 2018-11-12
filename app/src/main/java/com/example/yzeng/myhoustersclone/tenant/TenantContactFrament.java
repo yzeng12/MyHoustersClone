@@ -21,6 +21,7 @@ import com.example.yzeng.myhoustersclone.DataBase.OurRoomDataBase;
 import com.example.yzeng.myhoustersclone.R;
 import com.example.yzeng.myhoustersclone.network_retrofit.ApiService;
 import com.example.yzeng.myhoustersclone.network_retrofit.RetrofitInstance;
+import com.example.yzeng.myhoustersclone.pojo.PropertyTable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -105,6 +106,11 @@ public class TenantContactFrament extends Fragment implements TenantInterface.Fr
         spinner.setOnItemSelectedListener(this);
     }
 
+    @Override
+    public void initSpinnerAddPropertyConfirm(List<PropertyTable> propertyTables) {
+
+    }
+
     private class getAsyncTask extends AsyncTask<List<DatabaseTenant>, Void, List<DatabaseTenant>> {
 
         private DataBaseDao mAsyncTaskDao;
@@ -117,13 +123,6 @@ public class TenantContactFrament extends Fragment implements TenantInterface.Fr
         protected List<DatabaseTenant> doInBackground(List<DatabaseTenant>... voids) {
 
             tenantList =  mAsyncTaskDao.getAllTenant();
-
-            if (tenantList.size() == 0) {
-                Log.i(TAG, "shit");
-            }
-            else {
-                Log.i(TAG, tenantList.get(0).getName());
-            }
 
             return tenantList;
         }
@@ -184,14 +183,4 @@ public class TenantContactFrament extends Fragment implements TenantInterface.Fr
         databaseTenant = tenantList.get(0);
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-/*        if (tenantList.size() == 0) {
-            Log.i(TAG, "shit");
-        }
-        else {
-            Log.i(TAG, tenantList.get(0).getName());
-        }*/
-    }
 }

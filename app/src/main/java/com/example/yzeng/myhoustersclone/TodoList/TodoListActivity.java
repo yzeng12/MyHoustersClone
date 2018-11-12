@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.example.yzeng.myhoustersclone.DataBase.DataBaseDao;
 import com.example.yzeng.myhoustersclone.DataBase.OurRoomDataBase;
@@ -16,7 +17,7 @@ import java.util.List;
 public class TodoListActivity extends AppCompatActivity implements TodoListInterface.View{
     Toolbar toolbar;
     TodoListPresenter todoListPresenter;
-    ImageButton imageButtonContact, imageButtonAddTenant;
+    ImageView imageButtonAddTenant;
     private OurRoomDataBase db;
     private DataBaseDao Dao;
     RecyclerView rv;
@@ -27,7 +28,7 @@ public class TodoListActivity extends AppCompatActivity implements TodoListInter
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_todo_list);
         toolbar = findViewById(R.id.toolbar_tenant);
-
+        toolbar.setTitle("Todo List");
 
         imageButtonAddTenant = findViewById(R.id.ib_add_tenant);
 
@@ -37,8 +38,7 @@ public class TodoListActivity extends AppCompatActivity implements TodoListInter
         Dao = db.DatabaseDao();
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.TodoList_content, new TodoListFragment()).
-                addToBackStack(null)
+                .replace(R.id.TodoList_content, new TodoListFragment())
                 .commit();
 
         //todo display recycle view
@@ -57,4 +57,9 @@ public class TodoListActivity extends AppCompatActivity implements TodoListInter
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        toolbar.setTitle("Todo List");
+    }
 }

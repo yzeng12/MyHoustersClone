@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.yzeng.myhoustersclone.DataBase.DataBaseDao;
@@ -18,6 +19,7 @@ import com.example.yzeng.myhoustersclone.DataBase.OurRoomDataBase;
 import com.example.yzeng.myhoustersclone.R;
 import com.example.yzeng.myhoustersclone.network_retrofit.ApiService;
 import com.example.yzeng.myhoustersclone.network_retrofit.RetrofitInstance;
+import com.example.yzeng.myhoustersclone.ui_and_other.MySharedPrefences;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,13 +32,14 @@ public class TenantsActivity extends AppCompatActivity implements TenantInterfac
 
     Toolbar toolbar;
     TenantPresenter tenantPresenter;
-    ImageButton imageButtonContact, imageButtonAddTenant;
+    ImageView imageButtonAddTenant;
     RecyclerView recyclerView;
     TenantRVAdapter tenantRVAdapter;
     List<TenantPOJO> mList;
     FloatingActionButton fab;
     private OurRoomDataBase db;
     private DataBaseDao Dao;
+    MySharedPrefences mySharedPrefences;
 
     private static final String TAG = "TenantsActivity";
 
@@ -45,10 +48,13 @@ public class TenantsActivity extends AppCompatActivity implements TenantInterfac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tenants);
         toolbar = findViewById(R.id.toolbar_tenant);
+        toolbar.setTitle("Tenant List");
         imageButtonAddTenant = findViewById(R.id.ib_add_tenant);
 
         db = OurRoomDataBase.getDatabase(this);
         Dao = db.DatabaseDao();
+
+        mySharedPrefences = new MySharedPrefences();
 
         recyclerView = findViewById(R.id.rv_tenant_home);
         mList = new ArrayList<>();
@@ -79,7 +85,7 @@ public class TenantsActivity extends AppCompatActivity implements TenantInterfac
 
     @Override
     public void initViewConfirm() {
-        setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);;
         imageButtonAddTenant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,7 +112,8 @@ public class TenantsActivity extends AppCompatActivity implements TenantInterfac
     public void getTenantConfirm() {
         ApiService apiService = RetrofitInstance.getRetrofitJsonInstance()
                 .create(ApiService.class);
-        Call<TenantResponse> call = apiService.getTenantList("32");
+        String id = mySharedPrefences.getSharePreference(this).getString("id", null);
+        Call<TenantResponse> call = apiService.getTenantList(id);
 
         call.enqueue(new Callback<TenantResponse>() {
             @Override
@@ -175,6 +182,6 @@ public class TenantsActivity extends AppCompatActivity implements TenantInterfac
         else {
             super.onBackPressed();
         }
-        toolbar.setTitle("MyHousterClone");
+        toolbar.setTitle("Tenant List");
     }
 }

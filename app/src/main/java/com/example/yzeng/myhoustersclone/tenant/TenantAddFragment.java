@@ -1,6 +1,6 @@
 package com.example.yzeng.myhoustersclone.tenant;
 
-import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -16,14 +16,15 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.yzeng.myhoustersclone.DataBase.DataBaseDao;
+import com.example.yzeng.myhoustersclone.DataBase.OurRoomDataBase;
 import com.example.yzeng.myhoustersclone.R;
-import com.example.yzeng.myhoustersclone.login.LoginActivity;
 import com.example.yzeng.myhoustersclone.network_retrofit.ApiService;
 import com.example.yzeng.myhoustersclone.network_retrofit.RetrofitInstance;
+import com.example.yzeng.myhoustersclone.pojo.PropertyTable;
 import com.example.yzeng.myhoustersclone.ui_and_other.MySharedPrefences;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import retrofit2.Call;
@@ -39,8 +40,11 @@ public class TenantAddFragment extends Fragment implements TenantInterface.Fragm
     private String propertyId, landlordId;
 
     private ArrayAdapter<String> adapter;
-    private List<String> list;
+    private List<PropertyTable> propertyList;
     MySharedPrefences mySharedPrefences;
+
+    private OurRoomDataBase db;
+    private DataBaseDao Dao;
 
     private static final String TAG = "TenantAddFragment";
 
@@ -58,6 +62,9 @@ public class TenantAddFragment extends Fragment implements TenantInterface.Fragm
         buttonAddTenant = view.findViewById(R.id.bt_add_tenant);
         spinner = view.findViewById(R.id.sp_tenant);
 
+        db = OurRoomDataBase.getDatabase(getActivity());
+        Dao = db.DatabaseDao();
+
         mySharedPrefences = new MySharedPrefences();
 
         tenantPresenter.initSpinner();
@@ -74,19 +81,74 @@ public class TenantAddFragment extends Fragment implements TenantInterface.Fragm
 
     @Override
     public void initSpinnerConfirm() {
-        String[] array = {"a", "b", "c", "d", "e"};
-        list = new ArrayList<>();
-        list.addAll(Arrays.asList(array));
+
+        propertyList = new ArrayList<>();
+
+        getAsyncTask ga = new getAsyncTask(Dao);
+
+        ga.execute();
+
+/*        String[] array = {"a", "b", "c", "d", "e"};
+        propertyList = new ArrayList<>();
+        propertyList.addAll(Arrays.asList(array));
 
         adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item,
-                list);
+                propertyList);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+
+        spinner.setAdapter(adapter);
+
+        spinner.setOnItemSelectedListener(this);*/
+    }
+
+    @Override
+    public void initSpinnerAddPropertyConfirm(List<PropertyTable> propertyList) {
+        this.propertyList = propertyList;
+
+        List<String> propertyInfoList = new ArrayList<>();
+
+        for (int i = 0; i < propertyList.size(); i++) {
+            PropertyTable propertyTable = propertyList.get(i);
+            String str = "id: " + propertyTable.getPropertyId() + ", " + "address: " + propertyTable.getPropertyAddress() + ", "
+                    + "city: " + propertyTable.getPropertyCity() + ", " + "country: " + propertyTable.getPropertyCountry();
+            propertyInfoList.add(str);
+        }
+
+        adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item,
+                propertyInfoList);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
 
         spinner.setAdapter(adapter);
 
         spinner.setOnItemSelectedListener(this);
+
     }
+
+    private class getAsyncTask extends AsyncTask<Void, Void, List<PropertyTable>> {
+
+        private DataBaseDao mAsyncTaskDao;
+
+        getAsyncTask(DataBaseDao dao) {
+            mAsyncTaskDao = dao;
+        }
+
+        @Override
+        protected List<PropertyTable> doInBackground(Void... voids) {
+
+            propertyList =  mAsyncTaskDao.getAllProperty();
+
+            return propertyList;
+        }
+
+        @Override
+        protected void onPostExecute(List<PropertyTable> propertyList) {
+            super.onPostExecute(propertyList);
+            tenantPresenter.initSpinnerAddProperty(propertyList);
+        }
+    }
+
 
 
 
@@ -130,11 +192,11 @@ public class TenantAddFragment extends Fragment implements TenantInterface.Fragm
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        propertyId = adapter.getItem(position);
+        propertyId = propertyList.get(position).getPropertyId();
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
-        propertyId = adapter.getItem(0);
+        propertyId = propertyList.get(0).getPropertyId();
     }
 }

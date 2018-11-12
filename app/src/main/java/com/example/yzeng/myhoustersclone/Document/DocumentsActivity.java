@@ -8,6 +8,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.example.yzeng.myhoustersclone.DataBase.DataBaseDao;
 import com.example.yzeng.myhoustersclone.DataBase.OurRoomDataBase;
@@ -19,7 +20,7 @@ import java.util.List;
 public class DocumentsActivity extends AppCompatActivity implements DocumentInterface.View{
     Toolbar toolbar;
     DocumentPresenter documentPresenter;
-    ImageButton imageButtonContact, imageButtonAddTenant;
+    ImageView imageButtonAddTenant;
     private OurRoomDataBase db;
     private DataBaseDao Dao;
     RecyclerView rv;

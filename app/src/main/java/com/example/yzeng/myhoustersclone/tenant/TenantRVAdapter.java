@@ -31,11 +31,11 @@ public class TenantRVAdapter extends RecyclerView.Adapter<TenantRVAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
         TenantPOJO tenantPOJO = mList.get(position);
-        viewHolder.tv_name.setText(tenantPOJO.getTenantname());
-        viewHolder.tv_email.setText(tenantPOJO.getTenantemail());
-        viewHolder.tv_mobile.setText(tenantPOJO.getTenantmobile());
-        viewHolder.tv_propertyid.setText(tenantPOJO.getPropertyid());
-        viewHolder.tv_address.setText(tenantPOJO.getTenantaddress());
+        viewHolder.tv_name.setText("Name: " + tenantPOJO.getTenantname());
+        viewHolder.tv_email.setText("Email: " + tenantPOJO.getTenantemail());
+        viewHolder.tv_mobile.setText("Mobile: " + tenantPOJO.getTenantmobile());
+        viewHolder.tv_propertyid.setText("Property id: " + tenantPOJO.getPropertyid());
+        viewHolder.tv_address.setText("Address: " + tenantPOJO.getTenantaddress());
     }
 
     @Override

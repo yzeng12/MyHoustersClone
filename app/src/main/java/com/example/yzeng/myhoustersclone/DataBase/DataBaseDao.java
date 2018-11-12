@@ -41,12 +41,15 @@ public interface DataBaseDao {
     @Query("SELECT * from Transaction_Table ORDER BY ID ASC")
     List<DataBaseTransaction> getAllTransaction();
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertTenant(DatabaseTenant databaseTenant);
 
-    @Query("SELECT * from Tenant_Table ORDER BY ID ASC")
+    @Query("SELECT * from Tenant_Table ORDER BY Mobile ASC")
     List<DatabaseTenant> getAllTenant();
 
+
+    @Query("SELECT * from PropertyTable ORDER BY propertyId ASC")
+    List<PropertyTable> getAllProperty();
 
 
 /*    @Delete("Drop table Transaction_Table")

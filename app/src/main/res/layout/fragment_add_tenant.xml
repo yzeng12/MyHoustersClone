@@ -9,7 +9,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/medium_size"
-            android:text="Step 1: Choose a property"
+            android:text="@string/step_1_choose_a_property"
             android:textSize="@dimen/text_size_20sp"/>
 
         <Spinner
@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/medium_size"
-            android:text="Step 2: Enter tenants' information"
+            android:text="@string/step_2_enter_tenants_information"
             android:layout_marginStart="@dimen/medium_size"
             android:textSize="@dimen/text_size_20sp"/>
 
@@ -40,7 +40,7 @@
                 android:id="@+id/et_tenant_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Tenant's name"
+                android:hint="@string/tenant_s_name"
                 android:layout_marginTop="@dimen/medium_size"/>
 
         </android.support.design.widget.TextInputLayout>
@@ -55,7 +55,7 @@
                 android:id="@+id/et_tenant_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Tenant's email"
+                android:hint="@string/tenant_s_email"
                 android:layout_marginTop="@dimen/medium_size"/>
 
         </android.support.design.widget.TextInputLayout>
@@ -70,7 +70,7 @@
                 android:id="@+id/et_tenant_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Tenant's address"
+                android:hint="@string/tenant_s_address"
                 android:layout_marginTop="@dimen/medium_size"/>
 
         </android.support.design.widget.TextInputLayout>
@@ -86,7 +86,7 @@
                 android:id="@+id/et_tenant_mobile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Tenant's mobile"
+                android:hint="@string/tenant_s_mobile"
                 android:layout_marginTop="@dimen/medium_size"/>
 
         </android.support.design.widget.TextInputLayout>
@@ -98,7 +98,7 @@
             android:gravity="center"
             android:layout_gravity="center_horizontal"
             android:layout_margin="@dimen/medium_size"
-            android:text="Add tenant"
+            android:text="@string/add_tenant"
             android:textAllCaps="false"/>
 
 

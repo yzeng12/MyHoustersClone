@@ -9,10 +9,15 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/medium_size"/>
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Step 1: Select tenant"
+            android:text="@string/step_1_select_tenant"
             android:textSize="@dimen/text_size_20sp"
             android:layout_margin="@dimen/medium_size"/>
 
@@ -22,70 +27,13 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:gravity="center_horizontal"
-            android:layout_marginTop="@dimen/medium_size">
+            android:layout_margin="@dimen/medium_size">
         </Spinner>
-
-
-<!--        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/small_size"
-            android:layout_marginRight="@dimen/small_size">
-
-            <EditText
-                android:id="@+id/et_contact_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="tenant's name"/>
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/small_size"
-            android:layout_marginRight="@dimen/small_size">
-
-            <EditText
-                android:id="@+id/et_contact_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="tenant's email"/>
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/small_size"
-            android:layout_marginRight="@dimen/small_size">
-
-            <EditText
-                android:id="@+id/et_contact_address"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="tenant's address"/>
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/small_size"
-            android:layout_marginRight="@dimen/small_size">
-
-            <EditText
-                android:id="@+id/et_contact_mobile"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="tenant's mobile"/>
-
-        </android.support.design.widget.TextInputLayout>-->
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Step 2: Enter message"
+            android:text="@string/step_2_enter_message"
             android:textSize="@dimen/text_size_20sp"
             android:layout_margin="@dimen/medium_size"/>
 
@@ -99,9 +47,14 @@
                 android:id="@+id/et_contact_message"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="message to tenant"/>
+                android:layout_margin="@dimen/medium_size"
+                android:hint="@string/message_to_tenant"/>
 
         </android.support.design.widget.TextInputLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/medium_size"/>
 
         <Button
             android:id="@+id/bt_contact_tenant"
@@ -110,7 +63,7 @@
             android:gravity="center"
             android:layout_gravity="center_horizontal"
             android:layout_margin="@dimen/medium_size"
-            android:text="Send message"
+            android:text="@string/send_message"
             android:textAllCaps="false"/>
 
     </LinearLayout>

@@ -20,7 +20,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to RJT"
+        android:text="@string/Welcome"
         android:textSize="@dimen/text_size_20sp"
         android:layout_margin="@dimen/small_size"
         android:gravity="center_horizontal"/>
@@ -28,7 +28,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="What type of account do you want to sign up for"
+        android:text="@string/select_type"
         android:textSize="@dimen/text_size_15sp"
         android:layout_margin="@dimen/medium_size"
         android:gravity="center_horizontal"/>

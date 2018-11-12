@@ -58,7 +58,7 @@
                 android:paddingLeft="8dp"
                 android:textAlignment="center"
                 android:textColor="#0a5686"
-                android:text="Alerts"
+                android:text="@string/alerts"
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -67,7 +67,7 @@
                 android:paddingLeft="10dp"
                 android:textAlignment="center"
                 android:textColor="#0a5686"
-                android:text="Properties"
+                android:text="@string/Properties"
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -76,7 +76,7 @@
                 android:paddingRight="4dp"
                 android:textAlignment="center"
                 android:textColor="#0a5686"
-                android:text="Tenants"
+                android:text="@string/tenants"
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -122,7 +122,7 @@
             <TextView
                 android:textAlignment="center"
                 android:textColor="#0a5686"
-                android:text="Transactions"
+                android:text="@string/Transactions"
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -130,7 +130,7 @@
             <TextView
                 android:textAlignment="center"
                 android:textColor="#0a5686"
-                android:text="Collect Rent"
+                android:text="@string/collect_rent"
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -139,7 +139,7 @@
                 android:paddingRight="5dp"
                 android:textAlignment="center"
                 android:textColor="#0a5686"
-                android:text="To-Do List"
+                android:text="@string/To_Do_List"
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -190,7 +190,7 @@
                 android:paddingLeft="8dp"
                 android:textAlignment="center"
                 android:textColor="#0a5686"
-                android:text="Trips"
+                android:text="@string/Trips"
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -199,7 +199,7 @@
                 android:paddingLeft="10dp"
                 android:textAlignment="center"
                 android:textColor="#0a5686"
-                android:text="Documents"
+                android:text="@string/Documents"
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -207,7 +207,7 @@
             <TextView
                 android:textAlignment="center"
                 android:textColor="#0a5686"
-                android:text="Vendors"
+                android:text="@string/vendors"
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

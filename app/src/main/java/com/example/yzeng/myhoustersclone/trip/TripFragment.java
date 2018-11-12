@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.example.yzeng.myhoustersclone.DataBase.DataBaseDao;
 import com.example.yzeng.myhoustersclone.DataBase.OurRoomDataBase;
@@ -21,7 +22,7 @@ import java.util.List;
 public class TripFragment extends Fragment implements TripInterface.ListFragmentView{
 
     TripPresenter tripPresenter;
-    ImageButton imageButtonContact, imageButtonAddTenant;
+    ImageView imageButtonAddTenant;
     private OurRoomDataBase db;
     private DataBaseDao Dao;
     RecyclerView rv;

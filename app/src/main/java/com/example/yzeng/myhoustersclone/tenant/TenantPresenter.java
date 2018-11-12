@@ -1,5 +1,7 @@
 package com.example.yzeng.myhoustersclone.tenant;
 
+import com.example.yzeng.myhoustersclone.pojo.PropertyTable;
+
 import java.util.List;
 
 public class TenantPresenter implements TenantInterface.Presenter {
@@ -53,5 +55,10 @@ public class TenantPresenter implements TenantInterface.Presenter {
     @Override
     public void initSpinner(List<DatabaseTenant> aVoid) {
         tenantFragment.initSpinnerConfirm(aVoid);
+    }
+
+    @Override
+    public void initSpinnerAddProperty(List<PropertyTable> propertyTables) {
+        tenantFragment.initSpinnerAddPropertyConfirm(propertyTables);
     }
 }

@@ -2,5 +2,93 @@
     <string name="app_name">MyHoustersClone</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="Welcome">Welcome to our App</string>
+    <string name="select_type">What type of account do you want to sign up for</string>
+    <string name="signup_email">Email</string>
+    <string name="signup_password">Password</string>
+    <string name="again_password">input password again</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="landlord_email">landlord email</string>
+
+    <string name="Login">Login</string>
+    <string name="Login2Signup">New user? Sign up</string>
+    <string name="Forgot_Password">Forgot Password?</string>
+    <string name="Remember_me">Remember me</string>
+
+
+
+    <string name="Properties">Properties</string>
+    <string name="Add_Property">Add Property</string>
+    <string name="Add_property_below">Add property below</string>
+    <string name="Add">Add</string>
+    <string name="Pick_Place">Pick a Place</string>
+    <string name="Remove_Property">Remove this Property?</string>
+
+    <string name="tenants">Tenants</string>
+
+    <string name="Transactions">Transactions</string>
+    <string name="To_Do_List">To-Do List</string>
+    <string name="Trips">Trips</string>
+    <string name="Documents">Documents</string>
+    <string name="collect_rent">Collect Rent</string>
+    <string name="alerts">Alerts</string>
+    <string name="vendors">Vendors</string>
+    <string name="name">Name</string>
+    <string name="type">Type</string>
+    <string name="take_a_picture">Take a picture</string>
+    <string name="confirm_add_document">Confirm add document</string>
+    <string name="email">Email</string>
+    <string name="forgotpassword">ForgotPassword</string>
+    <string name="address">address</string>
+    <string name="city">city</string>
+    <string name="state">state</string>
+    <string name="country">country</string>
+    <string name="pro_status">pro_status</string>
+    <string name="purchase_price">purchase price</string>
+    <string name="mortgage">mortgage</string>
+    <string name="latitude">latitude</string>
+    <string name="longitude">longitude</string>
+    <string name="step_1_choose_a_property">Step 1: Choose a property</string>
+    <string name="step_2_enter_tenants_information">Step 2: Enter tenants\' information</string>
+    <string name="tenant_s_name">Tenant\'s name</string>
+    <string name="tenant_s_email">Tenant\'s email</string>
+    <string name="tenant_s_address">Tenant\'s address</string>
+    <string name="tenant_s_mobile">Tenant\'s mobile</string>
+    <string name="add_tenant">Add tenant</string>
+    <string name="step_1_select_tenant">Step 1: Select tenant</string>
+    <string name="step_2_enter_message">Step 2: Enter message</string>
+    <string name="message_to_tenant">message to tenant</string>
+    <string name="send_message">Send message</string>
+    <string name="task_info">Task info</string>
+    <string name="prority">Prority</string>
+    <string name="summary">summary</string>
+    <string name="description">description</string>
+    <string name="property">property</string>
+    <string name="select_departure_date">select_departure_date</string>
+    <string name="take_picture">Take a picture</string>
+    <string name="cost_and_vendor_info">Cost and Vendor info</string>
+    <string name="assign_to_vendor">Assign to Vendor</string>
+    <string name="estimate_cost">estimate cost</string>
+    <string name="actual_cost">actual_cost</string>
+    <string name="status_info">Status Info</string>
+    <string name="status">状态</string>
+    <string name="confirm_add_todolist">确定加入</string>
+    <string name="transaction_detail">交易明细</string>
+    <string name="select_transaction_date">选择交易日期</string>
+    <string name="summary2">总结</string>
+    <string name="description2">描述</string>
+    <string name="property2">房产</string>
+    <string name="payment_detail">费用明细</string>
+    <string name="choose_the_type_of_transaction">选择交易类型</string>
+    <string name="amount_of_payment">费用</string>
+    <string name="add_transaction">添加交易</string>
+    <string name="trip_description">旅行描述</string>
+    <string name="start_address">出发地址</string>
+    <string name="end_address">结束地址</string>
+    <string name="select_departure_date2">选择出发日期</string>
+    <string name="this_trip_is_round_trip">是否包含返程</string>
+    <string name="do_you_want_to_enter_the_total_miles">是否输入总里程</string>
+    <string name="confirm_add_trip">确认添加旅行</string>
+
 
 </resources>

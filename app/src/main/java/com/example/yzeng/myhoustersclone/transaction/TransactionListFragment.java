@@ -34,7 +34,7 @@ import java.util.List;
 public class TransactionListFragment extends Fragment implements TransactionInterface.FragmentView {
 
     TransactionPresenter transactionPresenter;
-    ImageButton imageButtonAddTenant;
+    ImageView imageButtonAddTenant;
     private OurRoomDataBase db;
     private DataBaseDao Dao;
     RecyclerView rv;

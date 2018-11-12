@@ -12,7 +12,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="@dimen/text_size_20sp"
-            android:text="Task info"
+            android:text="@string/task_info"
             android:textStyle="bold|italic"
             android:paddingStart="@dimen/small_size"
             android:background="#b3b3b3"
@@ -20,7 +20,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="@dimen/text_size_20sp"
-            android:text="Prority"
+            android:text="@string/prority"
 
             android:paddingStart="@dimen/small_size"
 
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="summary"
+            android:hint="@string/summary"
             android:padding="@dimen/medium_size"
             />
         </android.support.design.widget.TextInputLayout>
@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="description"
+            android:hint="@string/description"
             android:padding="@dimen/medium_size"
             />
         </android.support.design.widget.TextInputLayout>
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="property"
+            android:hint="@string/property"
             android:padding="@dimen/medium_size"
             />
         </android.support.design.widget.TextInputLayout>
@@ -80,7 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="select_departure_date"
+            android:hint="@string/select_departure_date"
             android:textSize="@dimen/medium_size"
 
             android:drawableRight="@drawable/ic_calender"/>
@@ -99,7 +99,7 @@
             android:id="@+id/btn_todolist_picture"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/large_size"
-            android:text="Take a picture"
+            android:text="@string/take_picture"
             android:textColor="@color/white"
             android:background="@color/colorPrimary"
             android:padding="@dimen/small_size"
@@ -110,7 +110,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="@dimen/text_size_20sp"
-            android:text="Cost and Vendor info"
+            android:text="@string/cost_and_vendor_info"
             android:textStyle="bold|italic"
             android:paddingStart="@dimen/small_size"
             android:background="#b3b3b3"
@@ -124,7 +124,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="Assign to Vendor"
+            android:hint="@string/assign_to_vendor"
             android:padding="@dimen/medium_size"
             />
         </android.support.design.widget.TextInputLayout>
@@ -137,7 +137,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="estimate cost"
+            android:hint="@string/estimate_cost"
             android:padding="@dimen/medium_size"
             />
         </android.support.design.widget.TextInputLayout>
@@ -150,14 +150,14 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="actual_cost"
+            android:hint="@string/actual_cost"
             android:padding="@dimen/medium_size"
             />
         </android.support.design.widget.TextInputLayout>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="@dimen/text_size_20sp"
-            android:text="Status Info"
+            android:text="@string/status_info"
             android:textStyle="bold|italic"
             android:paddingStart="@dimen/small_size"
             android:background="#b3b3b3"
@@ -165,7 +165,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="@dimen/text_size_20sp"
-            android:text="Status"
+            android:text="@string/status"
 
             android:paddingStart="@dimen/small_size"
 
@@ -185,7 +185,7 @@
             android:id="@+id/btn_todolist_ADD"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/large_size"
-            android:text="Confirm add TodoList"
+            android:text="@string/confirm_add_todolist"
             android:textColor="@color/white"
             android:background="@color/colorPrimary"
             android:padding="@dimen/small_size"

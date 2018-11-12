@@ -12,7 +12,7 @@
         <TextView
             android:background="#cccaca"
             android:textAlignment="center"
-            android:text="Add property below"
+            android:text="@string/Add_property_below"
             android:paddingTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp" />
@@ -25,11 +25,11 @@
             android:id="@+id/et_address_AP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="address" />
+            android:hint="@string/address" />
 
         <EditText
             android:id="@+id/et_city_AP"
-            android:hint="city"
+            android:hint="@string/city"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -37,17 +37,17 @@
             android:id="@+id/et_state_AP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="state" />
+            android:hint="@string/state" />
 
         <EditText
             android:id="@+id/et_country_AP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="country" />
+            android:hint="@string/country" />
 
         <EditText
             android:id="@+id/et_pro_status_AP"
-            android:hint="pro_status"
+            android:hint="@string/pro_status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -55,24 +55,24 @@
             android:id="@+id/et_purchasePrice_AP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="purchase price" />
+            android:hint="@string/purchase_price" />
 
         <EditText
             android:id="@+id/et_mortgage_AP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="mortgage" />
+            android:hint="@string/mortgage" />
 
 
 
         <EditText
             android:id="@+id/et_latitude_AP"
-            android:hint="latitude"
+            android:hint="@string/latitude"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <EditText
             android:id="@+id/et_longitude_AP"
-            android:hint="longitude"
+            android:hint="@string/longitude"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -83,7 +83,7 @@
         <Button
             android:id="@+id/btn_AddProperty_AP"
             android:layout_gravity="center"
-            android:text="Add"
+            android:text="@string/Add"
             android:textAllCaps="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -95,7 +95,7 @@
         <Button
             android:id="@+id/btn_pickPlace_AP"
             android:layout_gravity="center"
-            android:text="Pick a Place"
+            android:text="@string/Pick_Place"
             android:textAllCaps="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

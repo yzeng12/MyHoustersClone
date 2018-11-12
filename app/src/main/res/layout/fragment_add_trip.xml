@@ -19,7 +19,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Trip Description"
+                android:hint="@string/trip_description"
                 android:inputType="textPersonName"
                 android:padding="@dimen/medium_size" />
         </android.support.design.widget.TextInputLayout>
@@ -39,7 +39,7 @@
                     android:layout_height="wrap_content"
 
                     android:ems="10"
-                    android:hint="Start Address"
+                    android:hint="@string/start_address"
                     android:inputType="textPersonName"
                     android:padding="@dimen/medium_size"
 
@@ -72,7 +72,7 @@
                     android:layout_height="wrap_content"
 
                     android:ems="10"
-                    android:hint="End Address"
+                    android:hint="@string/end_address"
                     android:inputType="textPersonName"
                     android:padding="@dimen/medium_size" />
             </android.support.design.widget.TextInputLayout>
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:drawableRight="@drawable/ic_calender"
             android:ems="10"
-            android:hint="select_departure_date"
+            android:hint="@string/select_departure_date2"
             android:padding="@dimen/medium_size"
 
             android:textSize="@dimen/medium_size" />
@@ -109,7 +109,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:padding="@dimen/medium_size"
-                android:text="This trip is Round Trip?"
+                android:text="@string/this_trip_is_round_trip"
                 android:textSize="@dimen/medium_size" />
 
             <CheckBox
@@ -131,7 +131,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:padding="@dimen/medium_size"
-                android:text="Do you want to enter the total miles"
+                android:text="@string/do_you_want_to_enter_the_total_miles"
                 android:textSize="@dimen/medium_size" />
 
             <CheckBox
@@ -148,7 +148,7 @@
             android:layout_margin="@dimen/small_size"
             android:background="@color/colorPrimary"
             android:padding="@dimen/small_size"
-            android:text="Confirm add Trip"
+            android:text="@string/confirm_add_trip"
             android:textColor="@color/white" />
 
     </LinearLayout>
