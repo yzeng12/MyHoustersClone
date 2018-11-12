@@ -68,6 +68,7 @@
 
     <Button
         android:id="@+id/button_signup"
+        android:background="@drawable/button_curved"
         android:layout_width="@dimen/button_normal"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"

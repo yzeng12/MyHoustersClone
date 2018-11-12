@@ -57,6 +57,7 @@
             android:layout_height="@dimen/medium_size"/>
 
         <Button
+            android:background="@drawable/button_curved"
             android:id="@+id/bt_contact_tenant"
             android:layout_width="@dimen/button_normal"
             android:layout_height="wrap_content"
