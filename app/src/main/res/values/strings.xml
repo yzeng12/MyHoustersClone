@@ -71,24 +71,25 @@
     <string name="estimate_cost">estimate cost</string>
     <string name="actual_cost">actual_cost</string>
     <string name="status_info">Status Info</string>
-    <string name="status">状态</string>
-    <string name="confirm_add_todolist">确定加入</string>
-    <string name="transaction_detail">交易明细</string>
-    <string name="select_transaction_date">选择交易日期</string>
-    <string name="summary2">总结</string>
-    <string name="description2">描述</string>
-    <string name="property2">房产</string>
-    <string name="payment_detail">费用明细</string>
-    <string name="choose_the_type_of_transaction">选择交易类型</string>
-    <string name="amount_of_payment">费用</string>
-    <string name="add_transaction">添加交易</string>
-    <string name="trip_description">旅行描述</string>
-    <string name="start_address">出发地址</string>
-    <string name="end_address">结束地址</string>
-    <string name="select_departure_date2">选择出发日期</string>
-    <string name="this_trip_is_round_trip">是否包含返程</string>
-    <string name="do_you_want_to_enter_the_total_miles">是否输入总里程</string>
-    <string name="confirm_add_trip">确认添加旅行</string>
+    <string name="status">status</string>
+    <string name="confirm_add_todolist">confirm add todolist</string>
+    <string name="transaction_detail">transaction detail</string>
+    <string name="select_transaction_date">select transaction date</string>
+    <string name="summary2">summary</string>
+    <string name="description2">description</string>
+    <string name="property2">property</string>
+    <string name="payment_detail">payment detail</string>
+    <string name="choose_the_type_of_transaction">choose the type of transaction</string>
+    <string name="amount_of_payment">amount of payment</string>
+    <string name="add_transaction">add transaction</string>
+    <string name="trip_description">trip description</string>
+    <string name="start_address">start address</string>
+    <string name="end_address">end address</string>
+    <string name="select_departure_date2">select departure date</string>
+    <string name="this_trip_is_round_trip">Is this trip round trip?</string>
+    <string name="do_you_want_to_enter_the_total_miles">do you want to enter the total miles</string>
+    <string name="confirm_add_trip">confirm adding trip</string>
+
 
 
 </resources>
