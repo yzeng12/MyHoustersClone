@@ -35,7 +35,7 @@ public class TransactionListAdapter extends RecyclerView.Adapter<TransactionList
             viewHolder.tv.setText(
                     "Summary: " + list.get(position).getSummary() + "\n" +
                     "Description: " + list.get(position).getDescription() + "\n" +
-                    "Propery: " + list.get(position).getProperty() + "\n" +
+//                    "Propery: " + list.get(position).getProperty() + "\n" +
                     "Type: " + list.get(position).getType() + "\n" +
                     "Amount: " + list.get(position).getAmount() + "\n" +
                     "Date: " + list.get(position).getDate() + "\n"
