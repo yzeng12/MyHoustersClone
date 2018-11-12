@@ -31,6 +31,7 @@ public class DocumentsActivity extends AppCompatActivity implements DocumentInte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_documents);
         toolbar = findViewById(R.id.toolbar_tenant);
+        toolbar.setTitle("Document List");
         imageButtonAddTenant = findViewById(R.id.ib_add_tenant);
         getSupportFragmentManager()
                 .beginTransaction()
@@ -58,4 +59,9 @@ public class DocumentsActivity extends AppCompatActivity implements DocumentInte
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        toolbar.setTitle("Document List");
+    }
 }

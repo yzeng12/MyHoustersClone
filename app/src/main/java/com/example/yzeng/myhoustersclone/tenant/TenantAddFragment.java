@@ -169,7 +169,7 @@ public class TenantAddFragment extends Fragment implements TenantInterface.Fragm
 
                 String message = response.body();
                 Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
-
+                getActivity().onBackPressed();
             }
 
             @Override

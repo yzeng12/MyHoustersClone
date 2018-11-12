@@ -100,6 +100,7 @@ public class AddDocumentFragment extends Fragment implements DocumentInterface.F
     public void insert(DataBaseDocument dataBaseDocument) {
         new insertAsyncTask(Dao).execute(dataBaseDocument);
         Toast.makeText(getActivity(), "Add Document Success", Toast.LENGTH_LONG).show();
+        getActivity().onBackPressed();
     }
     private static class insertAsyncTask extends AsyncTask<DataBaseDocument, Void, Void> {
 

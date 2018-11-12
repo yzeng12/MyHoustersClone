@@ -23,6 +23,7 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.example.yzeng.myhoustersclone.DataBase.DataBaseDao;
 import com.example.yzeng.myhoustersclone.DataBase.OurRoomDataBase;
@@ -193,11 +194,11 @@ public class AddTodolistFragment extends Fragment implements TodoListInterface.F
     public void insert(DataBaseTodoList dataBaseTodoList) {
         new insertAsyncTask(Dao).execute(dataBaseTodoList);
         Toast.makeText(getActivity(), "Add Document Success", Toast.LENGTH_LONG).show();
-        getActivity().getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.TodoList_content, new TodoListFragment()).
-                addToBackStack(null)
-                .commit();
+//        getActivity().getSupportFragmentManager()
+////                .beginTransaction()
+////                .replace(R.id.TodoList_content, new TodoListFragment())
+////                .commit();
+        getActivity().onBackPressed();
     }
 
     private static class insertAsyncTask extends AsyncTask<DataBaseTodoList, Void, Void> {

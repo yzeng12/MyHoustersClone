@@ -228,11 +228,11 @@ public class AddTripFragment extends Fragment implements TripInterface.FragmentV
     public void insert(DataBaseTripList dataBaseTripList) {
         new insertAsyncTask(Dao).execute(dataBaseTripList);
         Toast.makeText(getActivity(), "Add Document Success", Toast.LENGTH_LONG).show();
-        getActivity().getSupportFragmentManager()
+ /*       getActivity().getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.Trip_content, new TripFragment()).
-                addToBackStack(null)
-                .commit();
+                .replace(R.id.Trip_content, new TripFragment())
+                .commit();*/
+        getActivity().onBackPressed();
     }
 
     private static class insertAsyncTask extends AsyncTask<DataBaseTripList, Void, Void> {
