@@ -34,7 +34,7 @@ import retrofit2.Response;
 public class PropertyListFragment extends Fragment {
 
 
-    List<PropertyListPOJO> myList;
+    private List<PropertyListPOJO> myList;
     Button btn_GoToAddProperty;
     MySharedPrefences mySharedPrefences;
     RecyclerView recyclerView;

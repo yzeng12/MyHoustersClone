@@ -21,13 +21,14 @@ import retrofit2.Response;
 
 public class RemovePropertyFragment extends Fragment {
 
-    Button btn_remove;
+    Button btn_remove,btn_goto_AllProp;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_remove_property,container,false);
 
         btn_remove = view.findViewById(R.id.btn_removeProperty);
+        btn_goto_AllProp = view.findViewById(R.id.btn_goTo_AllProperties);
 
         btn_remove.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +59,14 @@ public class RemovePropertyFragment extends Fragment {
                     }
                 });
 
+            }
+        });
+
+        btn_goto_AllProp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                getFragmentManager().beginTransaction().replace(R.id.id_PropertiesActivity, new AllPropertiesFragment()).addToBackStack("null").commit();
             }
         });
 

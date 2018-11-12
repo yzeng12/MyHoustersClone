@@ -66,5 +66,9 @@ public interface ApiService {
     @GET("/aamir/property-mgmt/remove-property.php?")
     Call<PropertyAddResponse> getRemoveMessage(@Query("propertyid") String propertyId);
 
+    //http://rjtmobile.com/aamir/property-mgmt/pro_mgt_property_all.php
+    @GET("/aamir/property-mgmt/pro_mgt_property_all.php")
+    Call<PropertyListResponse> getAllProperties();
+
 
 }

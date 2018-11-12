@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "488106812434",
+    "firebase_url": "https://houstersclonechat.firebaseio.com",
+    "project_id": "houstersclonechat",
+    "storage_bucket": "houstersclonechat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488106812434:android:5fb094bd6dfcd456",
+        "android_client_info": {
+          "package_name": "com.example.yzeng.myhoustersclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488106812434-mubcnne8okdhp2lq8geeet4aaekami0k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.yzeng.myhoustersclone",
+            "certificate_hash": "928a987bfa2bbadad1e660887833a1f9bc962ad8"
+          }
+        },
+        {
+          "client_id": "488106812434-qeodb4nc97i05sjonebgdgs9dn9lfe4d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6HZJhQWbWUFhbGxkd9_Rl5tmp9wIVQbk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488106812434-qeodb4nc97i05sjonebgdgs9dn9lfe4d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
