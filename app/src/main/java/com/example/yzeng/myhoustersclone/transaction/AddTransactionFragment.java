@@ -149,6 +149,7 @@ public class AddTransactionFragment extends Fragment implements TransactionInter
     public void insert(DataBaseTransaction dataBaseTransaction) {
         new insertAsyncTask(Dao).execute(dataBaseTransaction);
         Toast.makeText(getActivity(), "Add Transaction Success", Toast.LENGTH_LONG).show();
+        getActivity().onBackPressed();
 /*        getActivity().getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.TodoList_content, new TodoListFragment()).

@@ -183,5 +183,6 @@ public class TenantsActivity extends AppCompatActivity implements TenantInterfac
             super.onBackPressed();
         }
         toolbar.setTitle("Tenant List");
+        tenantPresenter.initRV();
     }
 }

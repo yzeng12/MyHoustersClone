@@ -163,6 +163,8 @@ public class TenantContactFrament extends Fragment implements TenantInterface.Fr
                 }
 
                 Toast.makeText(getContext(), "Message sent successfully!", Toast.LENGTH_SHORT).show();
+                buttonSendMes.setText("");
+                getActivity().onBackPressed();
             }
 
             @Override
