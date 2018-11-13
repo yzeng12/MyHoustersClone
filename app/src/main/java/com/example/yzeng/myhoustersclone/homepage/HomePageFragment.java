@@ -1,10 +1,12 @@
 package com.example.yzeng.myhoustersclone.homepage;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +18,7 @@ import com.example.yzeng.myhoustersclone.TodoList.TodoListActivity;
 import com.example.yzeng.myhoustersclone.tenant.TenantsActivity;
 import com.example.yzeng.myhoustersclone.transaction.TransactionActivity;
 import com.example.yzeng.myhoustersclone.trip.TripActivity;
+import com.example.yzeng.myhoustersclone.ui_and_other.MySharedPrefences;
 import com.github.mikephil.charting.charts.HorizontalBarChart;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Description;
@@ -35,12 +38,16 @@ public class HomePageFragment extends Fragment {
     ImageView icon_alerts, icon_tenant,icon_properties,icon_transactions,icon_collectRent,icon_toDoList,icon_trips,icon_documents,icon_vendors;
     private PieChart pieChart;
     private HorizontalBarChart barChart;
+    MySharedPrefences mySharedPrefences;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_home_page,container,false);
 
+        mySharedPrefences = new MySharedPrefences();
+
+        final String userType = mySharedPrefences.getSharePreference(getActivity()).getString("usertype", null);
 
         pieChart = view.findViewById(R.id.pieChart);
         barChart = view.findViewById(R.id.horizontal_barChart);
@@ -75,8 +82,24 @@ public class HomePageFragment extends Fragment {
         icon_tenant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (!userType.equals("Landlord")) {
+                    final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                    builder.setMessage("Tenants can be accessed only by Landlords");
+                    builder.setCancelable(true);
+
+                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            return;
+                        }
+
+                    });
+                    builder.show();
+                }
+                else{
                 Intent i = new Intent(getActivity(), TenantsActivity.class);
-                startActivity(i);
+                startActivity(i);}
             }
         });
 

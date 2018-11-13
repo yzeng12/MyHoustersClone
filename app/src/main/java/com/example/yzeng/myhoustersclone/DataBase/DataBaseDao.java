@@ -18,6 +18,7 @@ import java.util.List;
 @Dao
 public interface DataBaseDao {
 
+
     @Insert
     void insertDocument(DataBaseDocument document);
 
